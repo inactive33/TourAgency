@@ -1,2 +1,2 @@
 # TourAgency
-Tour agency project: documentation, application.
+Tour agency project: documentation, source application
