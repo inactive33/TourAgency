@@ -1,0 +1,7 @@
+#Игнорирование временных файлов Visual Studio
+.vs/
+*.user
+*.suo
+*.obj
+*.log
+*.tmp
