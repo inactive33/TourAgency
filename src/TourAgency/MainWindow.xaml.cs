@@ -24,5 +24,10 @@ namespace TourAgency
         {
             InitializeComponent();
         }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

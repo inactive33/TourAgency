@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!--test-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Туристическое агенство - Земная ось" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Grid Background="#d4d7ff" Panel.ZIndex="-2"></Grid>
+        <Grid Grid.Row="2" Background="#d4d7ff"></Grid>
+        <Button Content="Назад" Name="BtnBack" HorizontalAlignment="Left" Margin="10,20,0,20" Click="BtnBack_Click" Background="#c8e7ff" Width="65"></Button>
     </Grid>
 </Window>
