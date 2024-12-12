@@ -1,2 +1,34 @@
-# TourAgency
-Tour agency project: documentation, source application
+## I. Как склонировать репозиторий и начать с ним работать:
+
+1. Создаём новую пустую папку
+2. Заходим в **git bush**
+3. Переходим в созданную папку: 
+```bash 
+$ cd "Путь до папки"
+```
+4. Клонируем репозиторий:
+```bash
+$ git clone "https://github.com/inactive33/TourAgency"
+```
+5. Переходим в локальный .git: 
+```bash
+$ cd "Путь до папки/TourAgency/src/TourAgency"
+```
+
+## II. Управление с локального на удаленный репозиторий
+
+1. Добавим ссылку на удаленный репозиторий:
+```bash
+$ git remote add origin "https://github.com/inactive33/TourAgency"
+```
+2. Перед отправкой изменений проверяем удаленный репозиторий, чтобы загрузить актуальные данные:
+```bash
+$ git pull
+```
+3. Чтобы отправить локальные изменения на удаленный репозиторий:
+```bash
+$ git add .
+$ git commit -m "Комментарий"
+$ git push origin -u 
+$ git push
+```
