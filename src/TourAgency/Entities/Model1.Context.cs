@@ -10,16 +10,18 @@
 namespace TourAgency.Entities
 {
     using System;
+    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Windows;
+
     public partial class TourAgencyEntities : DbContext
     {
-        public TourAgencyEntities()
-            : base("name=TourAgencyEntities")
+        public TourAgencyEntities(string connectionString)
+            : base(connectionString)
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
