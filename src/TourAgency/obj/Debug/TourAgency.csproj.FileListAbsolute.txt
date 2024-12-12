@@ -23,3 +23,5 @@ E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\T
 E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CopyComplete
 E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe
 E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.pdb
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\AddEditPage.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\AddEditPage.baml

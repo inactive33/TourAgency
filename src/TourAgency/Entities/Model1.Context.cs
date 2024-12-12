@@ -15,9 +15,18 @@ namespace TourAgency.Entities
     
     public partial class TourAgencyEntities : DbContext
     {
+        private static TourAgencyEntities _context;
         public TourAgencyEntities()
             : base("name=TourAgencyEntities")
         {
+        }
+
+        public static TourAgencyEntities GetContext()
+        {
+            if (_context == null)
+                _context = new TourAgencyEntities();
+
+            return _context;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

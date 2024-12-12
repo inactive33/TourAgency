@@ -25,7 +25,23 @@ namespace TourAgency
         public ToursPage()
         {
             InitializeComponent();
-            //_currentHotel.Resort = false;
+            DGridHotels.ItemsSource = TourAgencyEntities.GetContext().Hotels.ToList();
+            //_currentHotel.Resort_id = false;
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            //Tour.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Hotel));
         }
     }
 }
