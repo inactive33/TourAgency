@@ -14,11 +14,20 @@ namespace TourAgency.Entities
     
     public partial class List_Include
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public List_Include()
+        {
+            this.Tours = new HashSet<Tour>();
+        }
+    
         public int ID_List_Include { get; set; }
         public bool Tour_Include_Flight { get; set; }
         public bool Tour_Include_Visa { get; set; }
         public bool Tour_Include_Hotel { get; set; }
         public bool Tour_Include_Excursion { get; set; }
         public bool Tour_Include_Entertaiments { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tour> Tours { get; set; }
     }
 }

@@ -21,8 +21,7 @@ namespace TourAgency.Entities
         public System.TimeSpan Tour_duration { get; set; }
         public int Flight_id { get; set; }
         public int Price { get; set; }
-        public bool Tour_include_flight { get; set; }
-        public bool Tour_include_visa { get; set; }
+        public int List_include_id { get; set; }
         public string Tour_type { get; set; }
         public byte[] Tour_description { get; set; }
         public int Comission { get; set; }
@@ -35,6 +34,7 @@ namespace TourAgency.Entities
         public virtual Country Country { get; set; }
         public virtual Flight Flight { get; set; }
         public virtual Hotel Hotel { get; set; }
+        public virtual List_Include List_Include { get; set; }
         public virtual Resort Resort { get; set; }
     }
 }

@@ -10,18 +10,16 @@
 namespace TourAgency.Entities
 {
     using System;
-    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Windows;
-
+    
     public partial class TourAgencyEntities : DbContext
     {
-        public TourAgencyEntities(string connectionString)
-            : base(connectionString)
+        public TourAgencyEntities()
+            : base("name=TourAgencyEntities")
         {
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -39,5 +37,6 @@ namespace TourAgency.Entities
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
