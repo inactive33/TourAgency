@@ -1,7 +1,69 @@
-#Игнорирование временных файлов Visual Studio
-.vs/
+# Системные файлы
+Thumbs.db           # Windows
+
+# Операционные системы
+# Windows Installer
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows
+ehthumbs.db
+
+# Файлы, генерируемые IDE
+.vs/                # Visual Studio
+
+# Файлы сборки и кэш
+bin/
+obj/
+out/
+
+# Локальные конфигурации
+appsettings.json
+appsettings.*.json
+
+# Пакеты и зависимости
+packages/
+.nuget/
+*.nupkg
+
+# Папки для временных данных
+# Также игнорируем кэш NuGet, временные файлы и тестовые данные
+.vs2019/
+.vs2017/
+.vs2015/
+
+# Конфигурации, специфичные для операционной системы
+# и их сессионные файлы, чтобы не тянуть локальные данные
+# Log-файлы
+*.log
+*.vspscc
+.vsscc
+
+# Объектные файлы для .NET проектов
+*.obj
+*.exe
+*.dll
+*.pdb
+
+# Файлы пользовательских настроек, которые не должны попадать в репозиторий
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Папки сборки для зависимостей
+.vscode/
+# Ignore nuget packages folder
+packages/
+
+# Прочее
 *.user
 *.suo
 *.obj
 *.log
 *.tmp
+/src/TourAgency/.vs/TourAgency/FileContentIndex
