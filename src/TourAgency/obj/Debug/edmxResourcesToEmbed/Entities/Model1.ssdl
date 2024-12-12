@@ -126,14 +126,21 @@
     <Property Name="Tour_duration" Type="time" Precision="6" Nullable="false" />
     <Property Name="Flight_id" Type="int" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
-    <Property Name="Tour_include_flight" Type="bit" Nullable="false" />
-    <Property Name="Tour_include_visa" Type="bit" Nullable="false" />
+    <Property Name="List_include_id" Type="int" Nullable="false" />
     <Property Name="Tour_type" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Tour_description" Type="varbinary" MaxLength="255" Nullable="false" />
     <Property Name="Comission" Type="int" Nullable="false" />
     <Property Name="Tour_company_id" Type="int" Nullable="false" />
     <Property Name="Resort_id" Type="int" Nullable="false" />
     <Property Name="Hotel_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID_user" />
+    </Key>
+    <Property Name="ID_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK_Flights_City">
     <End Role="City" Type="Self.City" Multiplicity="1" />
@@ -243,6 +250,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Tours_List_Include">
+    <End Role="List_Include" Type="Self.List_Include" Multiplicity="1" />
+    <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="List_Include">
+        <PropertyRef Name="ID_List_Include" />
+      </Principal>
+      <Dependent Role="Tours">
+        <PropertyRef Name="List_include_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Tours_Resort">
     <End Role="Resort" Type="Self.Resort" Multiplicity="1" />
     <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
@@ -268,6 +287,7 @@
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tours" EntityType="Self.Tours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Flights_City" Association="Self.FK_Flights_City">
       <End Role="City" EntitySet="City" />
       <End Role="Flights" EntitySet="Flights" />
@@ -302,6 +322,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Tours_Hotels" Association="Self.FK_Tours_Hotels">
       <End Role="Hotels" EntitySet="Hotels" />
+      <End Role="Tours" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_List_Include" Association="Self.FK_Tours_List_Include">
+      <End Role="List_Include" EntitySet="List_Include" />
       <End Role="Tours" EntitySet="Tours" />
     </AssociationSet>
     <AssociationSet Name="FK_Tours_Resort" Association="Self.FK_Tours_Resort">
