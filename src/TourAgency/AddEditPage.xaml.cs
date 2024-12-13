@@ -25,14 +25,44 @@ namespace TourAgency
         public AddEditPage(Tour selectedTour)
         {
             InitializeComponent();
+            ComboDeparture_city_id.ItemsSource = TourAgencyEntities.GetContext().Cities.ToList();
+            ComboArrival_country_id.ItemsSource = TourAgencyEntities.GetContext().Countries.ToList();
+            ComboResort.ItemsSource = TourAgencyEntities.GetContext().Resorts.ToList();
+            ComboHotel.ItemsSource = TourAgencyEntities.GetContext().Hotels.ToList();
+            ComboList_Include.ItemsSource = TourAgencyEntities.GetContext().List_Include.ToList();
+            ComboTour_company_id.ItemsSource = TourAgencyEntities.GetContext().Companies.ToList();
             if (selectedTour != null)
                 _currentTour = selectedTour;
 
         }
-
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder errors = new StringBuilder();
+            if (string.IsNullOrWhiteSpace(_currentTour.Departure_date)) errors.AppendLine("Укажите дату отправления!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Tore_duration)) errors.AppendLine("Укажите длительность тура!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Flight)) errors.AppendLine("Укажите рейс!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Price)) errors.AppendLine("Укажите цену!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Tour_type)) errors.AppendLine("Укажите тип тура!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Tour_description)) errors.AppendLine("Укажите описание тура!");
+            if (string.IsNullOrWhiteSpace(_currentTour.Comission)) errors.AppendLine("Укажите комиссию!");
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString());
+                return;
+            }
 
+            if (_currentTour.ID_tour == 0)
+                TourAgencyEntities.GetContext().Tours.Add(_currentTour);
+            try
+            {
+                TourAgencyEntities.GetContext().SaveChanges();
+                MessageBox.Show("Данные сохранены!");
+                Tour.MainFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

@@ -23,6 +23,7 @@ namespace TourAgency
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new ToursPage());
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

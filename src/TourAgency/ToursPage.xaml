@@ -13,7 +13,7 @@
             <RowDefinition Height="380"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="DGridHotels" AutoGenerateColumns = "false" IsReadOnly="True">
+        <DataGrid x:Name="DGridTour" AutoGenerateColumns = "false" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Город вылета" Binding="{Binding Departure_city_id}" Width="130"></DataGridTextColumn>
                 <DataGridTextColumn Header="Страна прибытия" Binding="{Binding Arrival_country_id}" Width="120"></DataGridTextColumn>

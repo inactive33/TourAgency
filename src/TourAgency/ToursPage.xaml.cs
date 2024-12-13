@@ -21,12 +21,11 @@ namespace TourAgency
     /// </summary>
     public partial class ToursPage : Page
     {
-        private Hotel _currentHotel = new Hotel();
+        private Tour _currentTour = new Tour();
         public ToursPage()
         {
             InitializeComponent();
-            DGridHotels.ItemsSource = TourAgencyEntities.GetContext().Hotels.ToList();
-            //_currentHotel.Resort_id = false;
+            DGridTour.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
@@ -41,7 +40,7 @@ namespace TourAgency
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            //Tour.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Hotel));
+            //Tour.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Tour));
         }
     }
 }

@@ -43,19 +43,19 @@
         <TextBlock Text="Комиссия" Grid.Row="11" HorizontalAlignment="Center" Margin="4"/>
         <TextBlock Text="Туроператор" Grid.Row="12" HorizontalAlignment="Center" Margin="4"/>
 
-        <ComboBox Text="{Binding Departure_city_id}" Grid.Column="1" Margin="4,4,70,4"/>
-        <ComboBox Text="{Binding Arrival_country_id}" Grid.Column="1" Grid.Row="1" Margin="4,4,70,4"/>
-        <ComboBox Text="{Binding Resort_id}" Grid.Column="1" Grid.Row="2" Margin="4,4,70,4"/>
-        <ComboBox Text="{Binding Hotel_id}" Grid.Column="1" Grid.Row="3" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding Departure_city_id}" Name="ComboDeparture_city_id" Grid.Column="1" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding Arrival_country_id}" Name="ComboArrival_country_id" Grid.Column="1" Grid.Row="1" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding Resort_id}" Name="ComboResort" Grid.Column="1" Grid.Row="2" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding Hotel_id}" Name="ComboHotel" Grid.Column="1" Grid.Row="3" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Departure_date}" MaxLength="50" Grid.Column="1" Grid.Row="4" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Tore_duration}" MaxLength="50" Grid.Column="1" Grid.Row="5" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Flight}" MaxLength="50" Grid.Column="1" Grid.Row="6" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Price}" MaxLength="50" Grid.Column="1" Grid.Row="7" Margin="4,4,70,4"/>
-        <ComboBox Text="{Binding List_Include}" Grid.Column="1" Grid.Row="8" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding List_Include}" Name="ComboList_Include" Grid.Column="1" Grid.Row="8" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Tour_type}" MaxLength="50" Grid.Column="1" Grid.Row="9" Margin="4,4,200,4"/>
         <TextBox Text="{Binding Tour_description}" MaxLength="150" Grid.Column="1" Grid.Row="10" Margin="4,4,70,4"/>
         <TextBox Text="{Binding Comission}" MaxLength="50" Grid.Column="1" Grid.Row="11" Margin="4,4,70,4"/>
-        <ComboBox Text="{Binding Tour_company_id}" Grid.Column="1" Grid.Row="12" Margin="4,4,70,4"/>
+        <ComboBox Text="{Binding Tour_company_id}" Name="ComboTour_company_id" Grid.Column="1" Grid.Row="12" Margin="4,4,70,4"/>
 
         <Button Content="Сохранить" Grid.Row="13" Name="BtnSave" Click="BtnSave_Click" Margin="80,3,290,3" Grid.Column="1" Background="#c8e7ff"/>
     </Grid>
