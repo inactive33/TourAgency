@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\
-=======
-E:\projects\TourAgency\src\TourAgency\obj\Debug\
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
+E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\
 TourAgency
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\App.xaml
-3-1063919827
-2-1189279499
-22-1099765836
-181059924049
-AddEditPage.xaml;MainWindow.xaml;ToursPage.xaml;
-=======
-E:\projects\TourAgency\src\TourAgency\App.xaml
+E:\документы 4\УП 07\project\TourAgency\src\TourAgency\App.xaml
 21244230511
 2-1189279499
-251643666879
-31-1901929590
+26-387413447
+23547979006
 MainWindow.xaml;Views\SignIn.xaml;
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
 
-False
+True
 
