@@ -60,6 +60,7 @@ namespace TourAgency.ViewModel
             if (_userModel.ValidateUser(_login, _password))
             {
                 Message = "Login successful!";
+                // Add navigate to MainPage
             }
             else
             {
