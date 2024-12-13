@@ -15,18 +15,9 @@ namespace TourAgency.Entities
     
     public partial class TourAgencyEntities : DbContext
     {
-        private static TourAgencyEntities _context;
-        public TourAgencyEntities()
-            : base("name=TourAgencyEntities")
+        public TourAgencyEntities(string connectionString)
+            : base(connectionString)
         {
-        }
-
-        public static TourAgencyEntities GetContext()
-        {
-            if (_context == null)
-                _context = new TourAgencyEntities();
-
-            return _context;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -46,5 +37,6 @@ namespace TourAgency.Entities
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }
