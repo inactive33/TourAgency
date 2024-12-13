@@ -18,6 +18,7 @@ ehthumbs.db
 bin/
 obj/
 out/
+/src/TourAgency/obj/Debug
 
 # Локальные конфигурации
 appsettings.json
