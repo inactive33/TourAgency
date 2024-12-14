@@ -18,5 +18,10 @@ namespace TourAgency
         {
 
         }
+
+        private void MainFrame_ContentRendered(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

@@ -129,3 +129,7 @@ E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CopyComplete
 E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe
 E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.pdb
 >>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditTour.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\TourPage.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditTour.baml
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\TourPage.baml
