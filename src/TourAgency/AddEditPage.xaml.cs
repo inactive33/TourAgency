@@ -17,12 +17,12 @@ using TourAgency.Entities;
 namespace TourAgency
 {
     /// <summary>
-    /// Логика взаимодействия для AddEditPage.xaml
+    /// Логика взаимодействия для AddEditTour.xaml
     /// </summary>
-    public partial class AddEditPage : Page
+    public partial class AddEditTour : Page
     {
         private Tour _currentTour = new Tour();
-        public AddEditPage(Tour selectedTour)
+        public AddEditTour(Tour selectedTour)
         {
             InitializeComponent();
             ComboDeparture_city_id.ItemsSource = TourAgencyEntities.GetContext().Cities.ToList();
@@ -38,13 +38,13 @@ namespace TourAgency
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            if (string.IsNullOrWhiteSpace(_currentTour.Departure_date)) errors.AppendLine("Укажите дату отправления!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Tore_duration)) errors.AppendLine("Укажите длительность тура!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Flight)) errors.AppendLine("Укажите рейс!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Price)) errors.AppendLine("Укажите цену!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Tour_type)) errors.AppendLine("Укажите тип тура!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Tour_description)) errors.AppendLine("Укажите описание тура!");
-            if (string.IsNullOrWhiteSpace(_currentTour.Comission)) errors.AppendLine("Укажите комиссию!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Departure_date)) errors.AppendLine("Укажите дату отправления!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Tour_duration)) errors.AppendLine("Укажите длительность тура!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Flight)) errors.AppendLine("Укажите рейс!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Price)) errors.AppendLine("Укажите цену!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Tour_type)) errors.AppendLine("Укажите тип тура!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Tour_description)) errors.AppendLine("Укажите описание тура!");
+            //if (string.IsNullOrWhiteSpace(_currentTour.Comission)) errors.AppendLine("Укажите комиссию!");
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
@@ -57,7 +57,7 @@ namespace TourAgency
             {
                 TourAgencyEntities.GetContext().SaveChanges();
                 MessageBox.Show("Данные сохранены!");
-                Tour.MainFrame.GoBack();
+                //Tour.MainFrame.GoBack();
             }
             catch (Exception ex)
             {
