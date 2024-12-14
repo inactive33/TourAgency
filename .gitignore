@@ -67,4 +67,5 @@ packages/
 *.obj
 *.log
 *.tmp
+*.cache
 /src/TourAgency/.vs/TourAgency/FileContentIndex
