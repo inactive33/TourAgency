@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.AssemblyReference.cache
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.SuggestedBindingRedirects.cache
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\MainWindow.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\ToursPage.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\App.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency_Content.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency_MarkupCompile.cache
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency_MarkupCompile.lref
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\TourAgency.exe.config
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\TourAgency.exe
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\TourAgency.pdb
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\EntityFramework.dll
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\EntityFramework.SqlServer.dll
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\EntityFramework.xml
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\EntityFramework.SqlServer.xml
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\bin\Debug\ru\EntityFramework.resources.dll
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\MainWindow.baml
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\ToursPage.baml
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.g.resources
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.Properties.Resources.resources
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.GenerateResource.cache
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CoreCompileInputs.cache
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CopyComplete
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\TourAgency.pdb
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\AddEditPage.g.cs
+E:\документы 4\УП 07\TourAgency\TourAgency\src\TourAgency\obj\Debug\AddEditPage.baml
+=======
 D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\TourAgency.exe.config
 D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\TourAgency.exe
 D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\TourAgency.pdb
@@ -99,3 +128,8 @@ E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CoreCompileInp
 E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CopyComplete
 E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe
 E:\projects\TourAgency\src\TourAgency\obj\Debug\TourAgency.pdb
+>>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditTour.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\TourPage.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditTour.baml
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\TourPage.baml

@@ -1,11 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using System;
-using System.Configuration;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TourAgency.Entities;
 using TourAgency.Models;
 
@@ -60,6 +55,7 @@ namespace TourAgency.ViewModel
             if (_userModel.ValidateUser(_login, _password))
             {
                 Message = "Login successful!";
+                // Add navigate to MainPage
             }
             else
             {
