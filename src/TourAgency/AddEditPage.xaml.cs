@@ -24,7 +24,7 @@ namespace TourAgency
         private Tour _currentTour = new Tour();
         public AddEditTour(Tour selectedTour)
         {
-            InitializeComponent();
+            InitializeComponent();  
             ComboDeparture_city_id.ItemsSource = TourAgencyEntities.GetContext().Cities.ToList();
             ComboArrival_country_id.ItemsSource = TourAgencyEntities.GetContext().Countries.ToList();
             ComboResort.ItemsSource = TourAgencyEntities.GetContext().Resorts.ToList();
