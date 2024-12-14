@@ -18,7 +18,7 @@ namespace TourAgency.Entities
                 string[] ConnectionStrings =
 {
                 ConfigurationManager.ConnectionStrings["TourAgencyEntities"].ConnectionString,
-                ConfigurationManager.ConnectionStrings["TourAgencyEntities2"].ConnectionString,
+                ConfigurationManager.ConnectionStrings["TourAgencyEntities2"].ConnectionString
             };
 
                 foreach (string connectionString in ConnectionStrings)
