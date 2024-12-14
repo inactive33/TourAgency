@@ -48,3 +48,7 @@ D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\Prism.Wpf.xml
 D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\_home\Project\TourAgency\src\TourAgency\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditPage.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\ToursPage.g.cs
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditPage.baml
+D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\ToursPage.baml
