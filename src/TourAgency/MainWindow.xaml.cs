@@ -12,6 +12,7 @@ namespace TourAgency
         {
             InitializeComponent();
             MainFrame.Navigate(new SignIn());
+            FrameManager.FrameMain = MainFrame;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
