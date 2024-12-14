@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\_home\Project\TourAgency\src\TourAgency\App.xaml
-41977251055
+4-39273649
 2-1189279499
-271539068087
+27837815939
 31-1095513146
-AddEditTour.xaml;MainWindow.xaml;TourPage.xaml;Views\SignIn.xaml;
+AddEditPage.xaml;MainWindow.xaml;ToursPage.xaml;Views\SignIn.xaml;
 
 False
 

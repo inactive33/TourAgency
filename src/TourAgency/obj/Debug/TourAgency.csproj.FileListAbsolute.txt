@@ -52,5 +52,8 @@ D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditPage.g.cs
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\ToursPage.g.cs
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditPage.baml
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\ToursPage.baml
+<<<<<<< HEAD
+=======
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\AddEditTour.baml
 D:\_home\Project\TourAgency\src\TourAgency\obj\Debug\TourPage.baml
+>>>>>>> main

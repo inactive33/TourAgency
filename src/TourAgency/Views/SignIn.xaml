@@ -10,7 +10,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SignIn" Background="White">
 
-    <Page.DataContext>
+    <Page.DataContext>  
         <viewmodel:SignInVM />
     </Page.DataContext>
     
