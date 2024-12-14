@@ -3,60 +3,60 @@
   "WorkspaceRootPath": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AddEditPage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\MainWindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\addeditpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:addeditpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AddEditPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\addeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:addeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ToursPage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\tourspage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:tourspage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ToursPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\tourspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:tourspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Models\\SignInModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\SignInModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\project\\touragency\\src\\touragency\\views\\signin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:views\\signin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ViewModel\\SignInVM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModel\\SignInVM.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\viewmodel\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:viewmodel\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Views\\SignIn.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\SignIn.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\views\\signin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:views\\signin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Views\\SignIn.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\SignIn.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\models\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:models\\signinmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\entities\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:entities\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\entities\\touragencyentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:entities\\touragencyentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\Model1.Context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\Model1.Context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\TourAgencyEntities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\TourAgencyEntities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\entities\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:entities\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\Model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entities\\Model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -65,8 +65,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "DockedWidth": 346,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -119,57 +119,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AddEditPage.xaml.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml.cs",
               "RelativeDocumentMoniker": "AddEditPage.xaml.cs",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml.cs",
               "RelativeToolTip": "AddEditPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAzAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T01:38:59.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AddEditPage.xaml",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml",
               "RelativeDocumentMoniker": "AddEditPage.xaml",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\AddEditPage.xaml",
               "RelativeToolTip": "AddEditPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-14T01:38:28.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ToursPage.xaml.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml.cs",
               "RelativeDocumentMoniker": "ToursPage.xaml.cs",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml.cs",
               "RelativeToolTip": "ToursPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAABfAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAnwBcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T01:36:01.97Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ToursPage.xaml",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml",
               "RelativeDocumentMoniker": "ToursPage.xaml",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ToursPage.xaml",
               "RelativeToolTip": "ToursPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-14T01:34:01.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "SignInModel.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Models\\SignInModel.cs",
               "RelativeDocumentMoniker": "Models\\SignInModel.cs",
@@ -177,11 +179,12 @@
               "RelativeToolTip": "Models\\SignInModel.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAowAwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:58:55.168Z"
+              "WhenOpened": "2024-12-12T18:58:55.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "SignInVM.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\ViewModel\\SignInVM.cs",
               "RelativeDocumentMoniker": "ViewModel\\SignInVM.cs",
@@ -189,23 +192,25 @@
               "RelativeToolTip": "ViewModel\\SignInVM.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:55:11.372Z"
+              "WhenOpened": "2024-12-12T18:55:11.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Views\\SignIn.xaml.cs",
+              "DocumentIndex": 7,
+              "Title": "SignIn.xaml.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Views\\SignIn.xaml.cs",
               "RelativeDocumentMoniker": "Views\\SignIn.xaml.cs",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Views\\SignIn.xaml.cs",
               "RelativeToolTip": "Views\\SignIn.xaml.cs",
               "ViewState": "AQIAABQAAAAAAAAAAADwvykAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T18:44:53.806Z"
+              "WhenOpened": "2024-12-12T18:44:53.806Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SignIn.xaml",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Views\\SignIn.xaml",
               "RelativeDocumentMoniker": "Views\\SignIn.xaml",
@@ -217,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -229,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -241,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Model1.Context.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\Model1.Context.cs",
               "RelativeDocumentMoniker": "Entities\\Model1.Context.cs",
@@ -249,11 +254,12 @@
               "RelativeToolTip": "Entities\\Model1.Context.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T17:28:24.47Z"
+              "WhenOpened": "2024-12-12T17:28:24.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "TourAgencyEntities.cs",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\TourAgencyEntities.cs",
               "RelativeDocumentMoniker": "Entities\\TourAgencyEntities.cs",
@@ -261,23 +267,25 @@
               "RelativeToolTip": "Entities\\TourAgencyEntities.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAIwBkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T17:24:03.236Z"
+              "WhenOpened": "2024-12-12T17:24:03.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\Model1.edmx",
               "RelativeDocumentMoniker": "Entities\\Model1.edmx",
               "ToolTip": "D:\\_home\\Project\\TourAgency\\src\\TourAgency\\Entities\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "Entities\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-12-12T17:19:58.355Z"
+              "WhenOpened": "2024-12-12T17:19:58.355Z",
+              "EditorCaption": " [Diagram1]"
             }
           ]
         },
         {
-          "DockedWidth": 197,
+          "DockedWidth": 51,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -291,6 +299,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         },
