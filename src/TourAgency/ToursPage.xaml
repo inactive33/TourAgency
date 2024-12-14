@@ -7,10 +7,10 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TourPage">
-
+    <ScrollViewer HorizontalScrollBarVisibility="Visible">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="380"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <DataGrid x:Name="DGridTour" AutoGenerateColumns = "false" IsReadOnly="True">
@@ -37,7 +37,8 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click" Width="140" Margin="0,25,0,0" Background="#c8e7ff"></Button>
-        <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnDelete" Click="BtnDelete_Click" Margin="660,25,0,0" Width="140" Background="#c8e7ff" ></Button>
+        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click" Width="140" Margin="10,0,0,0" Height="30" Background="#c8e7ff"></Button>
+            <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Name="BtnDelete" Click="BtnDelete_Click"  Margin="10,0,0,0" Height="30" Background="#c8e7ff" ></Button>
     </Grid>
+    </ScrollViewer>
 </Page>

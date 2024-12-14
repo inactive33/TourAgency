@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\
+E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\
 TourAgency
 none
 false
 DEBUG;TRACE
-D:\_home\proect\TourAgency\src\TourAgency\App.xaml
+E:\документы 4\УП 07\project\TourAgency\src\TourAgency\App.xaml
 4-39273649
 2-1189279499
 28-1277828051
-311060405596
+312021199116
 AddEditPage.xaml;MainWindow.xaml;ToursPage.xaml;Views\SignIn.xaml;
 
 False
