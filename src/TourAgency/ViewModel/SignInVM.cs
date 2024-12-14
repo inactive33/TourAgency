@@ -54,12 +54,12 @@ namespace TourAgency.ViewModel
             // Пытаемся проверить пользователя
             if (_userModel.ValidateUser(_login, _password))
             {
-                Message = "Login successful!";
-                // Add navigate to MainPage
+                Message = "Вход выполнен!";
+                FrameManager.FrameMain.Navigate(new ToursPage());
             }
             else
             {
-                Message = "Invalid login or password.";
+                Message = "Неверный пароль или логин";
             }
         }
         // Метод для получения строки подключения

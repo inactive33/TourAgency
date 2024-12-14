@@ -141,6 +141,7 @@
     <Compile Include="Entities\Tour.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FrameManager.cs" />
     <Compile Include="Models\SignInModel.cs" />
     <Compile Include="ToursPage.xaml.cs">
       <DependentUpon>ToursPage.xaml</DependentUpon>
