@@ -20,9 +20,9 @@
                 <DataGridTextColumn Header="Страна прибытия" Binding="{Binding Country.Name}" Width="120"></DataGridTextColumn>
                 <DataGridTextColumn Header="Курорты" Binding="{Binding Resort.Name}" Width="110"></DataGridTextColumn>
                 <DataGridTextColumn Header="Отели" Binding="{Binding Hotel.Name}" Width="140"></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата отправления" Binding="{Binding Departure_date}" Width="120"></DataGridTextColumn>
-                <DataGridTextColumn Header="Длительность тура" Binding="{Binding Tore_duration}" Width="150"></DataGridTextColumn>
-                <DataGridTextColumn Header="Рейс" Binding="{Binding Flight}" Width="150"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Дата отправления" Binding="{Binding Departure_date, StringFormat={}{0:dd/MM/yyyy}}" Width="120"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Длительность тура" Binding="{Binding Tour_duration}" Width="150"></DataGridTextColumn>
+                <DataGridTextColumn Header="Рейс" Binding="{Binding Flight.Flight_number}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="В тур включается" Binding="{Binding List_Include}" Width="150"></DataGridTextColumn>
                 <DataGridTextColumn Header="Тип тура" Binding="{Binding Tour_type}" Width="150"></DataGridTextColumn>
