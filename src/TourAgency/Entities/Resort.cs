@@ -17,14 +17,16 @@ namespace TourAgency.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Resort()
         {
+            this.Hotels = new HashSet<Hotel>();
             this.Tours = new HashSet<Tour>();
         }
     
         public int ID_resort { get; set; }
-        public byte[] Name { get; set; }
+        public string Name { get; set; }
         public int Country_id { get; set; }
     
-        public virtual Hotel Hotel { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hotel> Hotels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tour> Tours { get; set; }
     }

@@ -9,7 +9,9 @@
     <EntitySet Name="Hotels" EntityType="TourAgencyModel.Hotel" />
     <EntitySet Name="List_Include" EntityType="TourAgencyModel.List_Include" />
     <EntitySet Name="List_Present" EntityType="TourAgencyModel.List_Present" />
+    <EntitySet Name="Order_type" EntityType="TourAgencyModel.Order_type" />
     <EntitySet Name="Resorts" EntityType="TourAgencyModel.Resort" />
+    <EntitySet Name="Roles" EntityType="TourAgencyModel.Role" />
     <EntitySet Name="Rooms" EntityType="TourAgencyModel.Room" />
     <EntitySet Name="sysdiagrams" EntityType="TourAgencyModel.sysdiagram" />
     <EntitySet Name="Tours" EntityType="TourAgencyModel.Tour" />
@@ -18,9 +20,13 @@
       <End Role="City" EntitySet="Cities" />
       <End Role="Flight" EntitySet="Flights" />
     </AssociationSet>
-    <AssociationSet Name="FK_Tours_City1" Association="TourAgencyModel.FK_Tours_City1">
+    <AssociationSet Name="FK_Tours_City" Association="TourAgencyModel.FK_Tours_City">
       <End Role="City" EntitySet="Cities" />
       <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Companies_Order_type" Association="TourAgencyModel.FK_Companies_Order_type">
+      <End Role="Order_type" EntitySet="Order_type" />
+      <End Role="Company" EntitySet="Companies" />
     </AssociationSet>
     <AssociationSet Name="FK_Tours_Companies" Association="TourAgencyModel.FK_Tours_Companies">
       <End Role="Company" EntitySet="Companies" />
@@ -38,7 +44,7 @@
       <End Role="List_Present" EntitySet="List_Present" />
       <End Role="Hotel" EntitySet="Hotels" />
     </AssociationSet>
-    <AssociationSet Name="FK_Hotels_Resort" Association="TourAgencyModel.FK_Hotels_Resort">
+    <AssociationSet Name="FK_Hotels_Resort1" Association="TourAgencyModel.FK_Hotels_Resort1">
       <End Role="Resort" EntitySet="Resorts" />
       <End Role="Hotel" EntitySet="Hotels" />
     </AssociationSet>
@@ -58,6 +64,10 @@
       <End Role="Resort" EntitySet="Resorts" />
       <End Role="Tour" EntitySet="Tours" />
     </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="TourAgencyModel.FK_Users_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="City">
     <Key>
@@ -66,16 +76,17 @@
     <Property Name="ID_city" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Flights" Relationship="TourAgencyModel.FK_Flights_City" FromRole="City" ToRole="Flight" />
-    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_City1" FromRole="City" ToRole="Tour" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_City" FromRole="City" ToRole="Tour" />
   </EntityType>
   <EntityType Name="Company">
     <Key>
       <PropertyRef Name="ID_company" />
     </Key>
     <Property Name="ID_company" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Contact_info" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="Order_type" Type="Int32" Nullable="false" />
+    <Property Name="Order_type_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order_type" Relationship="TourAgencyModel.FK_Companies_Order_type" FromRole="Company" ToRole="Order_type" />
     <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Companies" FromRole="Company" ToRole="Tour" />
   </EntityType>
   <EntityType Name="Country">
@@ -128,7 +139,7 @@
     <Property Name="HotelStar" Type="Int32" Nullable="false" />
     <Property Name="List_Present_id" Type="Int32" Nullable="false" />
     <NavigationProperty Name="List_Present" Relationship="TourAgencyModel.FK_Hotels_List_Present" FromRole="Hotel" ToRole="List_Present" />
-    <NavigationProperty Name="Resort" Relationship="TourAgencyModel.FK_Hotels_Resort" FromRole="Hotel" ToRole="Resort" />
+    <NavigationProperty Name="Resort" Relationship="TourAgencyModel.FK_Hotels_Resort1" FromRole="Hotel" ToRole="Resort" />
     <NavigationProperty Name="Rooms" Relationship="TourAgencyModel.FK_Rooms_Hotels" FromRole="Hotel" ToRole="Room" />
     <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Hotels" FromRole="Hotel" ToRole="Tour" />
   </EntityType>
@@ -157,15 +168,31 @@
     <Property Name="Present_Swimming_Sauna" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Hotels" Relationship="TourAgencyModel.FK_Hotels_List_Present" FromRole="List_Present" ToRole="Hotel" />
   </EntityType>
+  <EntityType Name="Order_type">
+    <Key>
+      <PropertyRef Name="ID_order_type" />
+    </Key>
+    <Property Name="ID_order_type" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Companies" Relationship="TourAgencyModel.FK_Companies_Order_type" FromRole="Order_type" ToRole="Company" />
+  </EntityType>
   <EntityType Name="Resort">
     <Key>
       <PropertyRef Name="ID_resort" />
     </Key>
     <Property Name="ID_resort" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="Binary" Nullable="false" MaxLength="255" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Country_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Hotel" Relationship="TourAgencyModel.FK_Hotels_Resort" FromRole="Resort" ToRole="Hotel" />
+    <NavigationProperty Name="Hotels" Relationship="TourAgencyModel.FK_Hotels_Resort1" FromRole="Resort" ToRole="Hotel" />
     <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Resort" FromRole="Resort" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID_role" />
+    </Key>
+    <Property Name="ID_role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="TourAgencyModel.FK_Users_Roles" FromRole="Role" ToRole="User" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -197,17 +224,17 @@
     <Property Name="Departure_city_id" Type="Int32" Nullable="false" />
     <Property Name="Arrival_country_id" Type="Int32" Nullable="false" />
     <Property Name="Departure_date" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Tour_duration" Type="Time" Nullable="false" Precision="6" />
+    <Property Name="Tour_duration" Type="Time" Nullable="false" Precision="7" />
     <Property Name="Flight_id" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
     <Property Name="List_include_id" Type="Int32" Nullable="false" />
     <Property Name="Tour_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Tour_description" Type="Binary" Nullable="false" MaxLength="255" FixedLength="false" />
+    <Property Name="Tour_description" Type="Binary" MaxLength="255" FixedLength="false" />
     <Property Name="Comission" Type="Int32" Nullable="false" />
     <Property Name="Tour_company_id" Type="Int32" Nullable="false" />
     <Property Name="Resort_id" Type="Int32" Nullable="false" />
     <Property Name="Hotel_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="City" Relationship="TourAgencyModel.FK_Tours_City1" FromRole="Tour" ToRole="City" />
+    <NavigationProperty Name="City" Relationship="TourAgencyModel.FK_Tours_City" FromRole="Tour" ToRole="City" />
     <NavigationProperty Name="Company" Relationship="TourAgencyModel.FK_Tours_Companies" FromRole="Tour" ToRole="Company" />
     <NavigationProperty Name="Country" Relationship="TourAgencyModel.FK_Tours_Country" FromRole="Tour" ToRole="Country" />
     <NavigationProperty Name="Flight" Relationship="TourAgencyModel.FK_Tours_Flights" FromRole="Tour" ToRole="Flight" />
@@ -222,6 +249,8 @@
     <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role_id" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="TourAgencyModel.FK_Users_Roles" FromRole="User" ToRole="Role" />
   </EntityType>
   <Association Name="FK_Flights_City">
     <End Type="TourAgencyModel.City" Role="City" Multiplicity="1" />
@@ -235,7 +264,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Tours_City1">
+  <Association Name="FK_Tours_City">
     <End Type="TourAgencyModel.City" Role="City" Multiplicity="1" />
     <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
     <ReferentialConstraint>
@@ -244,6 +273,18 @@
       </Principal>
       <Dependent Role="Tour">
         <PropertyRef Name="Departure_city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Companies_Order_type">
+    <End Type="TourAgencyModel.Order_type" Role="Order_type" Multiplicity="1" />
+    <End Type="TourAgencyModel.Company" Role="Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_type">
+        <PropertyRef Name="ID_order_type" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="Order_type_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -295,15 +336,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Hotels_Resort">
+  <Association Name="FK_Hotels_Resort1">
     <End Type="TourAgencyModel.Resort" Role="Resort" Multiplicity="1" />
-    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="0..1" />
+    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resort">
         <PropertyRef Name="ID_resort" />
       </Principal>
       <Dependent Role="Hotel">
-        <PropertyRef Name="ID_hotel" />
+        <PropertyRef Name="Resort_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -352,6 +393,18 @@
       </Principal>
       <Dependent Role="Tour">
         <PropertyRef Name="Resort_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Type="TourAgencyModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="TourAgencyModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID_role" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Role_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
