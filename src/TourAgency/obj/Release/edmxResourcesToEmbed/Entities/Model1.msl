@@ -12,7 +12,7 @@
     <EntitySetMapping Name="Companies">
       <EntityTypeMapping TypeName="TourAgencyModel.Company">
         <MappingFragment StoreEntitySet="Companies">
-          <ScalarProperty Name="Order_type" ColumnName="Order_type" />
+          <ScalarProperty Name="Order_type_id" ColumnName="Order_type_id" />
           <ScalarProperty Name="Contact_info" ColumnName="Contact_info" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID_company" ColumnName="ID_company" />
@@ -95,12 +95,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Order_type">
+      <EntityTypeMapping TypeName="TourAgencyModel.Order_type">
+        <MappingFragment StoreEntitySet="Order_type">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_order_type" ColumnName="ID_order_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Resorts">
       <EntityTypeMapping TypeName="TourAgencyModel.Resort">
         <MappingFragment StoreEntitySet="Resort">
           <ScalarProperty Name="Country_id" ColumnName="Country_id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID_resort" ColumnName="ID_resort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="TourAgencyModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_role" ColumnName="ID_role" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -150,6 +166,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="TourAgencyModel.User">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Role_id" ColumnName="Role_id" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="ID_user" ColumnName="ID_user" />

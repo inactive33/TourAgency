@@ -12,13 +12,18 @@ namespace TourAgency.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Role
     {
-        public int ID_user { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> Role_id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Role()
+        {
+            this.Users = new HashSet<User>();
+        }
     
-        public virtual Role Role { get; set; }
+        public int ID_role { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

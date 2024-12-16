@@ -21,10 +21,11 @@ namespace TourAgency.Entities
         }
     
         public int ID_company { get; set; }
-        public System.DateTime Name { get; set; }
+        public string Name { get; set; }
         public string Contact_info { get; set; }
-        public int Order_type { get; set; }
+        public int Order_type_id { get; set; }
     
+        public virtual Order_type Order_type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tour> Tours { get; set; }
     }

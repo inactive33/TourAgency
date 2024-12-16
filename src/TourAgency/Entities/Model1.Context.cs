@@ -33,7 +33,9 @@ namespace TourAgency.Entities
         public virtual DbSet<Hotel> Hotels { get; set; }
         public virtual DbSet<List_Include> List_Include { get; set; }
         public virtual DbSet<List_Present> List_Present { get; set; }
+        public virtual DbSet<Order_type> Order_type { get; set; }
         public virtual DbSet<Resort> Resorts { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }

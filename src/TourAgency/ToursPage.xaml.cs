@@ -30,17 +30,39 @@ namespace TourAgency
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameManager.FrameMain.Navigate(new AddEditTour(null));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var usersForRemoving = DGridTour.SelectedItems.Cast<User>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {usersForRemoving.Count()} данные?", "Внимание!",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    //usersForRemoving.ForEach(user => { user.IsDeleted = true; });
+                    TourAgencyEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
 
+                    DGridTour.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
+                }
+                catch (Exception ex)
+                {
+                    var inner = ex.InnerException;
+                    MessageBox.Show(inner.ToString());
+                }
+            }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            //Tour.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Tour));
+            FrameManager.FrameMain.Navigate(new AddEditTour((sender as Button).DataContext as Tour));
+        }
+
+        private void BtnLoadFile_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
