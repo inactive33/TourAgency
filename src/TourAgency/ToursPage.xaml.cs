@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TourAgency.Entities;
 
 namespace TourAgency
@@ -21,7 +11,6 @@ namespace TourAgency
     /// </summary>
     public partial class ToursPage : Page
     {
-        private Tour _currentTour = new Tour();
         public ToursPage()
         {
             InitializeComponent();
@@ -35,8 +24,8 @@ namespace TourAgency
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var usersForRemoving = DGridTour.SelectedItems.Cast<User>().ToList();
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {usersForRemoving.Count()} данные?", "Внимание!",
+            var tourForRemoving = DGridTour.SelectedItems.Cast<Tour>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {tourForRemoving.Count()} данные?", "Внимание!",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
@@ -60,9 +49,22 @@ namespace TourAgency
             FrameManager.FrameMain.Navigate(new AddEditTour((sender as Button).DataContext as Tour));
         }
 
-        private void BtnLoadFile_Click(object sender, RoutedEventArgs e)
+        private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible) 
+            {
+                try
+                {
+                    TourAgencyEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                }
+                catch { }
+                DGridTour.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
+            }
         }
     }
 }
