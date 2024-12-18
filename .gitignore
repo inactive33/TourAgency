@@ -59,3 +59,8 @@ packages/
 *.cache
 /src/TourAgency/.vs/TourAgency/FileContentIndex
 /src/TourAgency/obj/Debug/TourAgency_MarkupCompile.i.cache
+/src/TourAgency/obj/Debug/ToursPage.g.i.cs
+/src/TourAgency/obj/Debug/ToursPage.g.cs
+/src/TourAgency/obj/Debug/TourAgency_MarkupCompile.lref
+/src/TourAgency/obj/Debug/AddEditPage.g.i.cs
+/src/TourAgency/obj/Debug/AddEditPage.g.cs
