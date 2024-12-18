@@ -1,11 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using System;
-using System.Configuration;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TourAgency.Entities;
 using TourAgency.Models;
 
@@ -59,11 +54,12 @@ namespace TourAgency.ViewModel
             // Пытаемся проверить пользователя
             if (_userModel.ValidateUser(_login, _password))
             {
-                Message = "Login successful!";
+                Message = "Вход выполнен!";
+                FrameManager.FrameMain.Navigate(new ToursPage());
             }
             else
             {
-                Message = "Invalid login or password.";
+                Message = "Неверный пароль или логин";
             }
         }
         // Метод для получения строки подключения

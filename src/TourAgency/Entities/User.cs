@@ -17,5 +17,8 @@ namespace TourAgency.Entities
         public int ID_user { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public Nullable<int> Role_id { get; set; }
+    
+        public virtual Role Role { get; set; }
     }
 }
