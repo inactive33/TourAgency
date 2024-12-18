@@ -68,3 +68,4 @@ packages/
 *.log
 *.tmp
 /src/TourAgency/.vs/TourAgency/FileContentIndex
+/src/TourAgency/obj/Debug/TourAgency_MarkupCompile.i.cache
