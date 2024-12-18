@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TourAgencyModelContainer" CdmEntityContainer="TourAgencyEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="TourAgencyModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_city" ColumnName="ID_city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="TourAgencyModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="Order_type" ColumnName="Order_type" />
+          <ScalarProperty Name="Contact_info" ColumnName="Contact_info" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_company" ColumnName="ID_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TourAgencyModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_country" ColumnName="ID_country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="TourAgencyModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="RUB" ColumnName="RUB" />
+          <ScalarProperty Name="EUR" ColumnName="EUR" />
+          <ScalarProperty Name="USD" ColumnName="USD" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ID_currency" ColumnName="ID_currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flights">
+      <EntityTypeMapping TypeName="TourAgencyModel.Flight">
+        <MappingFragment StoreEntitySet="Flights">
+          <ScalarProperty Name="Free_place_numbe2" ColumnName="Free_place_numbe2" />
+          <ScalarProperty Name="Free_place_number1" ColumnName="Free_place_number1" />
+          <ScalarProperty Name="Total_place_number" ColumnName="Total_place_number" />
+          <ScalarProperty Name="Arrival_time2" ColumnName="Arrival_time2" />
+          <ScalarProperty Name="Arrival_time1" ColumnName="Arrival_time1" />
+          <ScalarProperty Name="Departure_time" ColumnName="Departure_time" />
+          <ScalarProperty Name="Flight_type" ColumnName="Flight_type" />
+          <ScalarProperty Name="Flight_number" ColumnName="Flight_number" />
+          <ScalarProperty Name="Departure_date" ColumnName="Departure_date" />
+          <ScalarProperty Name="Day_of_week" ColumnName="Day_of_week" />
+          <ScalarProperty Name="Departure_city_id" ColumnName="Departure_city_id" />
+          <ScalarProperty Name="ID_flight" ColumnName="ID_flight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="TourAgencyModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotels">
+          <ScalarProperty Name="List_Present_id" ColumnName="List_Present_id" />
+          <ScalarProperty Name="HotelStar" ColumnName="HotelStar" />
+          <ScalarProperty Name="Dist_beach" ColumnName="Dist_beach" />
+          <ScalarProperty Name="Dist_center" ColumnName="Dist_center" />
+          <ScalarProperty Name="Dist_airport" ColumnName="Dist_airport" />
+          <ScalarProperty Name="Resort_id" ColumnName="Resort_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="List_Include">
+      <EntityTypeMapping TypeName="TourAgencyModel.List_Include">
+        <MappingFragment StoreEntitySet="List_Include">
+          <ScalarProperty Name="Tour_Include_Entertaiments" ColumnName="Tour_Include_Entertaiments" />
+          <ScalarProperty Name="Tour_Include_Excursion" ColumnName="Tour_Include_Excursion" />
+          <ScalarProperty Name="Tour_Include_Hotel" ColumnName="Tour_Include_Hotel" />
+          <ScalarProperty Name="Tour_Include_Visa" ColumnName="Tour_Include_Visa" />
+          <ScalarProperty Name="Tour_Include_Flight" ColumnName="Tour_Include_Flight" />
+          <ScalarProperty Name="ID_List_Include" ColumnName="ID_List_Include" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="List_Present">
+      <EntityTypeMapping TypeName="TourAgencyModel.List_Present">
+        <MappingFragment StoreEntitySet="List_Present">
+          <ScalarProperty Name="Present_Swimming_Sauna" ColumnName="Present_Swimming_Sauna" />
+          <ScalarProperty Name="Present_Swimming_Pool" ColumnName="Present_Swimming_Pool" />
+          <ScalarProperty Name="Present_Buffet" ColumnName="Present_Buffet" />
+          <ScalarProperty Name="Present_WiFi" ColumnName="Present_WiFi" />
+          <ScalarProperty Name="Present_Beach" ColumnName="Present_Beach" />
+          <ScalarProperty Name="Present_Bar" ColumnName="Present_Bar" />
+          <ScalarProperty Name="ID_List_Present" ColumnName="ID_List_Present" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resorts">
+      <EntityTypeMapping TypeName="TourAgencyModel.Resort">
+        <MappingFragment StoreEntitySet="Resort">
+          <ScalarProperty Name="Country_id" ColumnName="Country_id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_resort" ColumnName="ID_resort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="TourAgencyModel.Room">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="Free_number" ColumnName="Free_number" />
+          <ScalarProperty Name="Price_per_spot" ColumnName="Price_per_spot" />
+          <ScalarProperty Name="Price_per_room" ColumnName="Price_per_room" />
+          <ScalarProperty Name="Spot_number" ColumnName="Spot_number" />
+          <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+          <ScalarProperty Name="ID_room" ColumnName="ID_room" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TourAgencyModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="TourAgencyModel.Tour">
+        <MappingFragment StoreEntitySet="Tours">
+          <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+          <ScalarProperty Name="Resort_id" ColumnName="Resort_id" />
+          <ScalarProperty Name="Tour_company_id" ColumnName="Tour_company_id" />
+          <ScalarProperty Name="Comission" ColumnName="Comission" />
+          <ScalarProperty Name="Tour_description" ColumnName="Tour_description" />
+          <ScalarProperty Name="Tour_type" ColumnName="Tour_type" />
+          <ScalarProperty Name="List_include_id" ColumnName="List_include_id" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Flight_id" ColumnName="Flight_id" />
+          <ScalarProperty Name="Tour_duration" ColumnName="Tour_duration" />
+          <ScalarProperty Name="Departure_date" ColumnName="Departure_date" />
+          <ScalarProperty Name="Arrival_country_id" ColumnName="Arrival_country_id" />
+          <ScalarProperty Name="Departure_city_id" ColumnName="Departure_city_id" />
+          <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TourAgencyModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="ID_user" ColumnName="ID_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

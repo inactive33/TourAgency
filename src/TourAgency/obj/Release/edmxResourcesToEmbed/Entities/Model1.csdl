@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourAgencyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TourAgencyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="TourAgencyModel.City" />
+    <EntitySet Name="Companies" EntityType="TourAgencyModel.Company" />
+    <EntitySet Name="Countries" EntityType="TourAgencyModel.Country" />
+    <EntitySet Name="Currencies" EntityType="TourAgencyModel.Currency" />
+    <EntitySet Name="Flights" EntityType="TourAgencyModel.Flight" />
+    <EntitySet Name="Hotels" EntityType="TourAgencyModel.Hotel" />
+    <EntitySet Name="List_Include" EntityType="TourAgencyModel.List_Include" />
+    <EntitySet Name="List_Present" EntityType="TourAgencyModel.List_Present" />
+    <EntitySet Name="Resorts" EntityType="TourAgencyModel.Resort" />
+    <EntitySet Name="Rooms" EntityType="TourAgencyModel.Room" />
+    <EntitySet Name="sysdiagrams" EntityType="TourAgencyModel.sysdiagram" />
+    <EntitySet Name="Tours" EntityType="TourAgencyModel.Tour" />
+    <EntitySet Name="Users" EntityType="TourAgencyModel.User" />
+    <AssociationSet Name="FK_Flights_City" Association="TourAgencyModel.FK_Flights_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Flight" EntitySet="Flights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_City1" Association="TourAgencyModel.FK_Tours_City1">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_Companies" Association="TourAgencyModel.FK_Tours_Companies">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_Country" Association="TourAgencyModel.FK_Tours_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_Flights" Association="TourAgencyModel.FK_Tours_Flights">
+      <End Role="Flight" EntitySet="Flights" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hotels_List_Present" Association="TourAgencyModel.FK_Hotels_List_Present">
+      <End Role="List_Present" EntitySet="List_Present" />
+      <End Role="Hotel" EntitySet="Hotels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hotels_Resort" Association="TourAgencyModel.FK_Hotels_Resort">
+      <End Role="Resort" EntitySet="Resorts" />
+      <End Role="Hotel" EntitySet="Hotels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rooms_Hotels" Association="TourAgencyModel.FK_Rooms_Hotels">
+      <End Role="Hotel" EntitySet="Hotels" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_Hotels" Association="TourAgencyModel.FK_Tours_Hotels">
+      <End Role="Hotel" EntitySet="Hotels" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_List_Include" Association="TourAgencyModel.FK_Tours_List_Include">
+      <End Role="List_Include" EntitySet="List_Include" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tours_Resort" Association="TourAgencyModel.FK_Tours_Resort">
+      <End Role="Resort" EntitySet="Resorts" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="ID_city" />
+    </Key>
+    <Property Name="ID_city" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Flights" Relationship="TourAgencyModel.FK_Flights_City" FromRole="City" ToRole="Flight" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_City1" FromRole="City" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID_company" />
+    </Key>
+    <Property Name="ID_company" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Contact_info" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Order_type" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Companies" FromRole="Company" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ID_country" />
+    </Key>
+    <Property Name="ID_country" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Country" FromRole="Country" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="ID_currency" />
+    </Key>
+    <Property Name="ID_currency" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="USD" Type="Double" Nullable="false" />
+    <Property Name="EUR" Type="Double" Nullable="false" />
+    <Property Name="RUB" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flight">
+    <Key>
+      <PropertyRef Name="ID_flight" />
+    </Key>
+    <Property Name="ID_flight" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Departure_city_id" Type="Int32" Nullable="false" />
+    <Property Name="Day_of_week" Type="Int32" Nullable="false" />
+    <Property Name="Departure_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Flight_number" Type="Int32" Nullable="false" />
+    <Property Name="Flight_type" Type="Int32" Nullable="false" />
+    <Property Name="Departure_time" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Arrival_time1" Type="Time" Nullable="false" Precision="6" />
+    <Property Name="Arrival_time2" Type="Time" Nullable="false" Precision="6" />
+    <Property Name="Total_place_number" Type="Int32" Nullable="false" />
+    <Property Name="Free_place_number1" Type="Int32" Nullable="false" />
+    <Property Name="Free_place_numbe2" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="TourAgencyModel.FK_Flights_City" FromRole="Flight" ToRole="City" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Flights" FromRole="Flight" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="ID_hotel" />
+    </Key>
+    <Property Name="ID_hotel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Resort_id" Type="Int32" Nullable="false" />
+    <Property Name="Dist_airport" Type="Int32" Nullable="false" />
+    <Property Name="Dist_center" Type="Int32" Nullable="false" />
+    <Property Name="Dist_beach" Type="Int32" Nullable="false" />
+    <Property Name="HotelStar" Type="Int32" Nullable="false" />
+    <Property Name="List_Present_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="List_Present" Relationship="TourAgencyModel.FK_Hotels_List_Present" FromRole="Hotel" ToRole="List_Present" />
+    <NavigationProperty Name="Resort" Relationship="TourAgencyModel.FK_Hotels_Resort" FromRole="Hotel" ToRole="Resort" />
+    <NavigationProperty Name="Rooms" Relationship="TourAgencyModel.FK_Rooms_Hotels" FromRole="Hotel" ToRole="Room" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Hotels" FromRole="Hotel" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="List_Include">
+    <Key>
+      <PropertyRef Name="ID_List_Include" />
+    </Key>
+    <Property Name="ID_List_Include" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tour_Include_Flight" Type="Boolean" Nullable="false" />
+    <Property Name="Tour_Include_Visa" Type="Boolean" Nullable="false" />
+    <Property Name="Tour_Include_Hotel" Type="Boolean" Nullable="false" />
+    <Property Name="Tour_Include_Excursion" Type="Boolean" Nullable="false" />
+    <Property Name="Tour_Include_Entertaiments" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_List_Include" FromRole="List_Include" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="List_Present">
+    <Key>
+      <PropertyRef Name="ID_List_Present" />
+    </Key>
+    <Property Name="ID_List_Present" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Present_Bar" Type="Boolean" Nullable="false" />
+    <Property Name="Present_Beach" Type="Boolean" Nullable="false" />
+    <Property Name="Present_WiFi" Type="Boolean" Nullable="false" />
+    <Property Name="Present_Buffet" Type="Boolean" Nullable="false" />
+    <Property Name="Present_Swimming_Pool" Type="Boolean" Nullable="false" />
+    <Property Name="Present_Swimming_Sauna" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Hotels" Relationship="TourAgencyModel.FK_Hotels_List_Present" FromRole="List_Present" ToRole="Hotel" />
+  </EntityType>
+  <EntityType Name="Resort">
+    <Key>
+      <PropertyRef Name="ID_resort" />
+    </Key>
+    <Property Name="ID_resort" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Binary" Nullable="false" MaxLength="255" FixedLength="false" />
+    <Property Name="Country_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Hotel" Relationship="TourAgencyModel.FK_Hotels_Resort" FromRole="Resort" ToRole="Hotel" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyModel.FK_Tours_Resort" FromRole="Resort" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID_room" />
+    </Key>
+    <Property Name="ID_room" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+    <Property Name="Spot_number" Type="Int32" Nullable="false" />
+    <Property Name="Price_per_room" Type="Int32" Nullable="false" />
+    <Property Name="Price_per_spot" Type="Int32" Nullable="false" />
+    <Property Name="Free_number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Hotel" Relationship="TourAgencyModel.FK_Rooms_Hotels" FromRole="Room" ToRole="Hotel" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="ID_tour" />
+    </Key>
+    <Property Name="ID_tour" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Departure_city_id" Type="Int32" Nullable="false" />
+    <Property Name="Arrival_country_id" Type="Int32" Nullable="false" />
+    <Property Name="Departure_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Tour_duration" Type="Time" Nullable="false" Precision="6" />
+    <Property Name="Flight_id" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="List_include_id" Type="Int32" Nullable="false" />
+    <Property Name="Tour_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tour_description" Type="Binary" Nullable="false" MaxLength="255" FixedLength="false" />
+    <Property Name="Comission" Type="Int32" Nullable="false" />
+    <Property Name="Tour_company_id" Type="Int32" Nullable="false" />
+    <Property Name="Resort_id" Type="Int32" Nullable="false" />
+    <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="TourAgencyModel.FK_Tours_City1" FromRole="Tour" ToRole="City" />
+    <NavigationProperty Name="Company" Relationship="TourAgencyModel.FK_Tours_Companies" FromRole="Tour" ToRole="Company" />
+    <NavigationProperty Name="Country" Relationship="TourAgencyModel.FK_Tours_Country" FromRole="Tour" ToRole="Country" />
+    <NavigationProperty Name="Flight" Relationship="TourAgencyModel.FK_Tours_Flights" FromRole="Tour" ToRole="Flight" />
+    <NavigationProperty Name="Hotel" Relationship="TourAgencyModel.FK_Tours_Hotels" FromRole="Tour" ToRole="Hotel" />
+    <NavigationProperty Name="List_Include" Relationship="TourAgencyModel.FK_Tours_List_Include" FromRole="Tour" ToRole="List_Include" />
+    <NavigationProperty Name="Resort" Relationship="TourAgencyModel.FK_Tours_Resort" FromRole="Tour" ToRole="Resort" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID_user" />
+    </Key>
+    <Property Name="ID_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Flights_City">
+    <End Type="TourAgencyModel.City" Role="City" Multiplicity="1" />
+    <End Type="TourAgencyModel.Flight" Role="Flight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID_city" />
+      </Principal>
+      <Dependent Role="Flight">
+        <PropertyRef Name="Departure_city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_City1">
+    <End Type="TourAgencyModel.City" Role="City" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID_city" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Departure_city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_Companies">
+    <End Type="TourAgencyModel.Company" Role="Company" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID_company" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Tour_company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_Country">
+    <End Type="TourAgencyModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID_country" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Arrival_country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_Flights">
+    <End Type="TourAgencyModel.Flight" Role="Flight" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flight">
+        <PropertyRef Name="ID_flight" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Flight_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hotels_List_Present">
+    <End Type="TourAgencyModel.List_Present" Role="List_Present" Multiplicity="1" />
+    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="List_Present">
+        <PropertyRef Name="ID_List_Present" />
+      </Principal>
+      <Dependent Role="Hotel">
+        <PropertyRef Name="List_Present_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hotels_Resort">
+    <End Type="TourAgencyModel.Resort" Role="Resort" Multiplicity="1" />
+    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Resort">
+        <PropertyRef Name="ID_resort" />
+      </Principal>
+      <Dependent Role="Hotel">
+        <PropertyRef Name="ID_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rooms_Hotels">
+    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="1" />
+    <End Type="TourAgencyModel.Room" Role="Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID_hotel" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="Hotel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_Hotels">
+    <End Type="TourAgencyModel.Hotel" Role="Hotel" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID_hotel" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Hotel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_List_Include">
+    <End Type="TourAgencyModel.List_Include" Role="List_Include" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="List_Include">
+        <PropertyRef Name="ID_List_Include" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="List_include_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tours_Resort">
+    <End Type="TourAgencyModel.Resort" Role="Resort" Multiplicity="1" />
+    <End Type="TourAgencyModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resort">
+        <PropertyRef Name="ID_resort" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Resort_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

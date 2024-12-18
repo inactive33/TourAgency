@@ -14,20 +14,9 @@ ehthumbs.db
 # Файлы, генерируемые IDE
 .vs/                # Visual Studio
 
-# Файлы сборки и кэш
-bin/
-obj/
-out/
-/src/TourAgency/obj/Debug/
-
 # Локальные конфигурации
 appsettings.json
 appsettings.*.json
-
-# Пакеты и зависимости
-packages/
-.nuget/
-*.nupkg
 
 # Папки для временных данных
 # Также игнорируем кэш NuGet, временные файлы и тестовые данные
@@ -67,4 +56,5 @@ packages/
 *.obj
 *.log
 *.tmp
+*.cache
 /src/TourAgency/.vs/TourAgency/FileContentIndex
