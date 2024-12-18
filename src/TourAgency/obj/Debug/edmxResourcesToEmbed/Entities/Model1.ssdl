@@ -12,9 +12,9 @@
       <PropertyRef Name="ID_company" />
     </Key>
     <Property Name="ID_company" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="date" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Contact_info" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Order_type" Type="int" Nullable="false" />
+    <Property Name="Order_type_id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Country">
     <Key>
@@ -86,13 +86,27 @@
     <Property Name="Present_Swimming_Pool" Type="bit" Nullable="false" />
     <Property Name="Present_Swimming_Sauna" Type="bit" Nullable="false" />
   </EntityType>
+  <EntityType Name="Order_type">
+    <Key>
+      <PropertyRef Name="ID_order_type" />
+    </Key>
+    <Property Name="ID_order_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
   <EntityType Name="Resort">
     <Key>
       <PropertyRef Name="ID_resort" />
     </Key>
     <Property Name="ID_resort" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varbinary" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" Nullable="false" />
     <Property Name="Country_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID_role" />
+    </Key>
+    <Property Name="ID_role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Rooms">
     <Key>
@@ -123,24 +137,17 @@
     <Property Name="Departure_city_id" Type="int" Nullable="false" />
     <Property Name="Arrival_country_id" Type="int" Nullable="false" />
     <Property Name="Departure_date" Type="date" Nullable="false" />
-    <Property Name="Tour_duration" Type="time" Precision="6" Nullable="false" />
+    <Property Name="Tour_duration" Type="time" Precision="7" Nullable="false" />
     <Property Name="Flight_id" Type="int" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
-<<<<<<< HEAD
-    <Property Name="Tour_include_flight" Type="bit" Nullable="false" />
-    <Property Name="Tour_include_visa" Type="bit" Nullable="false" />
-=======
     <Property Name="List_include_id" Type="int" Nullable="false" />
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
     <Property Name="Tour_type" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Tour_description" Type="varbinary" MaxLength="255" Nullable="false" />
+    <Property Name="Tour_description" Type="varbinary" MaxLength="255" />
     <Property Name="Comission" Type="int" Nullable="false" />
     <Property Name="Tour_company_id" Type="int" Nullable="false" />
     <Property Name="Resort_id" Type="int" Nullable="false" />
     <Property Name="Hotel_id" Type="int" Nullable="false" />
   </EntityType>
-<<<<<<< HEAD
-=======
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="ID_user" />
@@ -148,8 +155,20 @@
     <Property Name="ID_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role_id" Type="int" />
   </EntityType>
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
+  <Association Name="FK_Companies_Order_type">
+    <End Role="Order_type" Type="Self.Order_type" Multiplicity="1" />
+    <End Role="Companies" Type="Self.Companies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_type">
+        <PropertyRef Name="ID_order_type" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="Order_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Flights_City">
     <End Role="City" Type="Self.City" Multiplicity="1" />
     <End Role="Flights" Type="Self.Flights" Multiplicity="*" />
@@ -174,15 +193,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Hotels_Resort">
+  <Association Name="FK_Hotels_Resort1">
     <End Role="Resort" Type="Self.Resort" Multiplicity="1" />
-    <End Role="Hotels" Type="Self.Hotels" Multiplicity="0..1" />
+    <End Role="Hotels" Type="Self.Hotels" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resort">
         <PropertyRef Name="ID_resort" />
       </Principal>
       <Dependent Role="Hotels">
-        <PropertyRef Name="ID_hotel" />
+        <PropertyRef Name="Resort_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -198,7 +217,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Tours_City1">
+  <Association Name="FK_Tours_City">
     <End Role="City" Type="Self.City" Multiplicity="1" />
     <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
     <ReferentialConstraint>
@@ -258,8 +277,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-<<<<<<< HEAD
-=======
   <Association Name="FK_Tours_List_Include">
     <End Role="List_Include" Type="Self.List_Include" Multiplicity="1" />
     <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
@@ -272,7 +289,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
   <Association Name="FK_Tours_Resort">
     <End Role="Resort" Type="Self.Resort" Multiplicity="1" />
     <End Role="Tours" Type="Self.Tours" Multiplicity="*" />
@@ -285,6 +301,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="ID_role" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище TourAgencyModelContainer">
     <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
@@ -294,14 +322,17 @@
     <EntitySet Name="Hotels" EntityType="Self.Hotels" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="List_Include" EntityType="Self.List_Include" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="List_Present" EntityType="Self.List_Present" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_type" EntityType="Self.Order_type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Resort" EntityType="Self.Resort" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tours" EntityType="Self.Tours" Schema="dbo" store:Type="Tables" />
-<<<<<<< HEAD
-=======
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
+    <AssociationSet Name="FK_Companies_Order_type" Association="Self.FK_Companies_Order_type">
+      <End Role="Order_type" EntitySet="Order_type" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
     <AssociationSet Name="FK_Flights_City" Association="Self.FK_Flights_City">
       <End Role="City" EntitySet="City" />
       <End Role="Flights" EntitySet="Flights" />
@@ -310,7 +341,7 @@
       <End Role="List_Present" EntitySet="List_Present" />
       <End Role="Hotels" EntitySet="Hotels" />
     </AssociationSet>
-    <AssociationSet Name="FK_Hotels_Resort" Association="Self.FK_Hotels_Resort">
+    <AssociationSet Name="FK_Hotels_Resort1" Association="Self.FK_Hotels_Resort1">
       <End Role="Resort" EntitySet="Resort" />
       <End Role="Hotels" EntitySet="Hotels" />
     </AssociationSet>
@@ -318,7 +349,7 @@
       <End Role="Hotels" EntitySet="Hotels" />
       <End Role="Rooms" EntitySet="Rooms" />
     </AssociationSet>
-    <AssociationSet Name="FK_Tours_City1" Association="Self.FK_Tours_City1">
+    <AssociationSet Name="FK_Tours_City" Association="Self.FK_Tours_City">
       <End Role="City" EntitySet="City" />
       <End Role="Tours" EntitySet="Tours" />
     </AssociationSet>
@@ -338,16 +369,17 @@
       <End Role="Hotels" EntitySet="Hotels" />
       <End Role="Tours" EntitySet="Tours" />
     </AssociationSet>
-<<<<<<< HEAD
-=======
     <AssociationSet Name="FK_Tours_List_Include" Association="Self.FK_Tours_List_Include">
       <End Role="List_Include" EntitySet="List_Include" />
       <End Role="Tours" EntitySet="Tours" />
     </AssociationSet>
->>>>>>> f66203523e7d37b9723b686746329293e1ca5d51
     <AssociationSet Name="FK_Tours_Resort" Association="Self.FK_Tours_Resort">
       <End Role="Resort" EntitySet="Resort" />
       <End Role="Tours" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

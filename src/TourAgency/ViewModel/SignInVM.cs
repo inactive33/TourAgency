@@ -55,7 +55,7 @@ namespace TourAgency.ViewModel
             if (_userModel.ValidateUser(_login, _password))
             {
                 Message = "Вход выполнен!";
-                FrameManager.FrameMain.Navigate(new ToursPage());
+                FrameManager.FrameMain.Navigate(new ToursAdminPage());
             }
             else
             {

@@ -9,9 +9,6 @@
 
 namespace TourAgency.Entities
 {
-    using System;
-    using System.Collections.Generic;
-    
     public partial class Tour
     {
         public int ID_tour { get; set; }

@@ -9,9 +9,9 @@ namespace TourAgency
     /// <summary>
     /// Логика взаимодействия для ToursPage.xaml
     /// </summary>
-    public partial class ToursPage : Page
+    public partial class ToursAdminPage : Page
     {
-        public ToursPage()
+        public ToursAdminPage()
         {
             InitializeComponent();
             DGridTour.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();

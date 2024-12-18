@@ -56,8 +56,14 @@
     <Reference Include="Prism.Container.Abstractions, Version=9.0.106.9543, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>packages\Prism.Container.Abstractions.9.0.106\lib\net47\Prism.Container.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Prism.Container.Unity, Version=9.0.106.9543, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>packages\Prism.Container.Unity.9.0.106\lib\net462\Prism.Container.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Prism.Events, Version=9.0.537.60525, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>packages\Prism.Events.9.0.537\lib\net47\Prism.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=9.0.537.60525, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>packages\Prism.Unity.9.0.537\lib\net47\Prism.Unity.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Prism.Wpf, Version=9.0.537.60525, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>packages\Prism.Wpf.9.0.537\lib\net47\Prism.Wpf.dll</HintPath>
@@ -88,16 +94,22 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.7.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Abstractions.5.11.7\lib\net48\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.Container.5.11.11\lib\net48\Unity.Container.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="AddEditPage.xaml.cs">
+    </Page>
+    <Compile Include="Views\AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\City.cs">
@@ -149,18 +161,21 @@
     </Compile>
     <Compile Include="FrameManager.cs" />
     <Compile Include="Models\SignInModel.cs" />
-    <Compile Include="ToursPage.xaml.cs">
-      <DependentUpon>ToursPage.xaml</DependentUpon>
+    <Compile Include="ToursAdminPage.xaml.cs">
+      <DependentUpon>ToursAdminPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\SignInVM.cs" />
     <Compile Include="Views\SignIn.xaml.cs">
       <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddEditPage.xaml">
+    <Compile Include="Views\TourSearchPage.xaml.cs">
+      <DependentUpon>TourSearchPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AddEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -172,15 +187,19 @@
     <Compile Include="Entities\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ToursPage.xaml">
+    <Page Include="ToursAdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TourSearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

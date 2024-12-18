@@ -6,18 +6,12 @@ namespace TourAgency.Views
     /// <summary>
     /// Логика взаимодействия для SignIn.xaml
     /// </summary>
-    public partial class SignIn : Page
+    public partial class SignIn : UserControl
     {
         public SignIn()
         {
             InitializeComponent();
         }
-
-        private void SignInButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Password_PasswordChanged(object sender, RoutedEventArgs e)
         {
             // Получаем ссылку на ViewModel через DataContext

@@ -166,3 +166,9 @@ E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\Tour
 E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.CopyComplete
 E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe
 E:\документы 4\УП 07\project\TourAgency\src\TourAgency\obj\Debug\TourAgency.pdb
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\TourAgency.csproj.SuggestedBindingRedirects.cache
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\TourAgency.exe.config
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\Views\AddEditPage.g.cs
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\Views\MainWindow.g.cs
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\ToursAdminPage.g.cs
+D:\_home\proect\TourAgency\src\TourAgency\obj\Debug\Views\TourSearchPage.g.cs
