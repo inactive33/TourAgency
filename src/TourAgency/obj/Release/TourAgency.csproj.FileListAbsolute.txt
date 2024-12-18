@@ -162,3 +162,5 @@ C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourAgency.cs
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourAgency.csproj.CopyComplete
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourAgency.exe
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourAgency.pdb
+D:\_home\proect\TourAgency\src\TourAgency\obj\Release\TourSearchControl.g.cs
+D:\_home\proect\TourAgency\src\TourAgency\obj\Release\TourSearchControl.baml

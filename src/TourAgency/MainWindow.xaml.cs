@@ -11,7 +11,7 @@ namespace TourAgency
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ToursPage());
+            MainFrame.Navigate(new TourSearchControl());
             FrameManager.FrameMain = MainFrame;
         }
 
@@ -27,7 +27,7 @@ namespace TourAgency
 
         private void BtnTours_Click(object sender, RoutedEventArgs e)
         {
-           // FrameManager.FrameMain.Navigate(new ToursSearchPage());
+                FrameManager.FrameMain.Navigate(new TourSearchControl());
         }
 
         private void BtnNavHotels_Click(object sender, RoutedEventArgs e)

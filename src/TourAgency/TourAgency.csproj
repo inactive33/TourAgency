@@ -149,6 +149,9 @@
     </Compile>
     <Compile Include="FrameManager.cs" />
     <Compile Include="Models\SignInModel.cs" />
+    <Compile Include="TourSearchControl.xaml.cs">
+      <DependentUpon>TourSearchControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ToursPage.xaml.cs">
       <DependentUpon>ToursPage.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TourSearchControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ToursPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

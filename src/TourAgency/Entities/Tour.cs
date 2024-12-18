@@ -28,7 +28,9 @@ namespace TourAgency.Entities
         public int Tour_company_id { get; set; }
         public int Resort_id { get; set; }
         public int Hotel_id { get; set; }
-    
+
+        public string HashedID => "#" + ID_tour;
+
         public virtual City City { get; set; }
         public virtual Company Company { get; set; }
         public virtual Country Country { get; set; }
