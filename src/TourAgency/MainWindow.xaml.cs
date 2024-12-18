@@ -19,5 +19,20 @@ namespace TourAgency
         {
 
         }
+
+        private void BtnNavTour_Click(object sender, RoutedEventArgs e)
+        {
+            FrameManager.FrameMain.Navigate(new SignIn());
+        }
+
+        private void BtnTours_Click(object sender, RoutedEventArgs e)
+        {
+           // FrameManager.FrameMain.Navigate(new ToursSearchPage());
+        }
+
+        private void BtnNavHotels_Click(object sender, RoutedEventArgs e)
+        {
+            // FrameManager.FrameMain.Navigate(new HotelsSearchPage());
+        }
     }
 }

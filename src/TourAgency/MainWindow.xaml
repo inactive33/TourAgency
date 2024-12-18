@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TourAgency"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:local="clr-namespace:TourAgency" xmlns:viewmodel="clr-namespace:TourAgency.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
+        Title="Туристическое агентство" Height="450" Width="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
@@ -20,10 +21,51 @@
         <Grid Grid.Column="1" Background="#d4d7ff" Panel.ZIndex="-2"></Grid>
         <Grid Grid.Row="2" Grid.Column="1" Background="#d4d7ff"></Grid>
         <Frame Grid.Column="1" NavigationUIVisibility="Hidden" Grid.Row="1" Name="MainFrame"></Frame>
-        
-        <!--Навигация-->
         <Grid Grid.Column="0" Background="#d4d7ff" Panel.ZIndex="-2"></Grid>
         <Grid Grid.Column="0" Grid.Row="2" Background="#d4d7ff" Panel.ZIndex="-2"></Grid>
-        <TextBlock Grid.Row="1" Text="Навигация" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20"/>
+
+        <!--Навигация-->
+        <Border Grid.Column="0" Grid.Row="1" Background="#F2F5F9" BorderBrush="#DCE0E6" BorderThickness="1">
+            <StackPanel>
+
+                <TextBlock Text="Навигация" 
+                           FontSize="18" 
+                           FontWeight="Bold" 
+                           Foreground="#333333"
+                           Margin="10,10,10,20"/>
+                <Button Margin="10,5" Padding="10" Cursor="Hand" Background="#E7EFF6" BorderBrush="#A9C9E9" Name="BtnTours" Click="BtnTours_Click">
+                    <Button.Content>
+                        <TextBlock Text="Туры с перелётом" 
+                                   TextWrapping="Wrap" 
+                                   TextAlignment="Center"
+                                   FontSize="14" 
+                                   Foreground="#2C3E50"/>
+
+                    </Button.Content>
+                </Button>
+
+                <Button Content="Отели" 
+                        Margin="10,5" 
+                        Padding="10"
+                        FontSize="14" 
+                        Background="#E7EFF6"
+                        Foreground="#2C3E50"
+                        BorderBrush="#A9C9E9"
+                        Cursor="Hand"
+                        Name="BtnNavHotels"
+                        Click="BtnNavHotels_Click"
+                        HorizontalAlignment="Stretch" />
+
+                <Button Margin="10,5" Padding="10" Cursor="Hand" Background="#E7EFF6" BorderBrush="#A9C9E9" Name="BtnNavTour" Click="BtnNavTour_Click">
+                    <Button.Content>
+                        <TextBlock Text="Кабинет туриста" 
+                       TextWrapping="Wrap" 
+                       TextAlignment="Center"
+                       FontSize="14" 
+                       Foreground="#2C3E50"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

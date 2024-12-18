@@ -6,7 +6,7 @@ namespace TourAgency.Views
     /// <summary>
     /// Логика взаимодействия для SignIn.xaml
     /// </summary>
-    public partial class SignIn : Page
+    public partial class SignIn : UserControl
     {
         public SignIn()
         {
