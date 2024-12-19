@@ -147,7 +147,7 @@
           <Property Name="Price" Type="int" Nullable="false" />
           <Property Name="List_include_id" Type="int" Nullable="false" />
           <Property Name="Tour_type" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Tour_description" Type="varbinary" MaxLength="255" />
+          <Property Name="Tour_description" Type="varchar(max)" />
           <Property Name="Comission" Type="int" Nullable="false" />
           <Property Name="Tour_company_id" Type="int" Nullable="false" />
           <Property Name="Resort_id" Type="int" Nullable="false" />
@@ -620,7 +620,7 @@
           <Property Name="Price" Type="Int32" Nullable="false" />
           <Property Name="List_include_id" Type="Int32" Nullable="false" />
           <Property Name="Tour_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Tour_description" Type="Binary" MaxLength="255" FixedLength="false" />
+          <Property Name="Tour_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Comission" Type="Int32" Nullable="false" />
           <Property Name="Tour_company_id" Type="Int32" Nullable="false" />
           <Property Name="Resort_id" Type="Int32" Nullable="false" />

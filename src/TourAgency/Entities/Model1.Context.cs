@@ -15,8 +15,8 @@ namespace TourAgency.Entities
     
     public partial class TourAgencyEntities : DbContext
     {
-        public TourAgencyEntities(string connectionString)
-            : base(connectionString)
+        public TourAgencyEntities(string connectString)
+            : base(connectString)
         {
         }
     

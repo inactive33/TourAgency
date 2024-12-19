@@ -26,22 +26,15 @@ namespace TourAgency
             InitializeComponent();
             Update();
 
-            LViewTours.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
-            // 1 - админ, 2 -  пользователь
-            //if (App.CurrentUser.Role_id == 1)
-            {
-                //BtnEdit.Visibility = Visibility.Visible;
-            }
-            //else
-            {
-                //BtnEdit.Visibility = Visibility.Collapsed;
-            }
-            ResortSearchBox.SelectedItem = null;
-            DepartureCitySearchBox.SelectedItem = null;
-            CountrySearchBox.SelectedItem = null;
-            DepartureDateSearchBox.SelectedDate = null;
-            CustomCheckBoxComboBox.SelectedItem = null;
-
+            //// 1 - админ, 2 -  пользователь 3 - турист
+            ////if (App.CurrentUser.Role_id == 1)
+            //{
+            //    BtnEdit.Visibility = Visibility.Visible;
+            //}
+            ////else
+            //{
+            //    BtnEdit.Visibility = Visibility.Collapsed;
+            //}
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -58,6 +51,9 @@ namespace TourAgency
 
         private void Update() 
         {
+            LViewTours.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
+
+            HotelSearchBox.ItemsSource = TourAgencyEntities.GetContext().Hotels.ToList();
             CountrySearchBox.ItemsSource = TourAgencyEntities.GetContext().Countries.ToList();
             DepartureCitySearchBox.ItemsSource = TourAgencyEntities.GetContext().Cities.ToList();
             ResortSearchBox.ItemsSource = TourAgencyEntities.GetContext().Resorts.ToList();

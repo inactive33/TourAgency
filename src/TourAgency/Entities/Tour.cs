@@ -23,14 +23,12 @@ namespace TourAgency.Entities
         public int Price { get; set; }
         public int List_include_id { get; set; }
         public string Tour_type { get; set; }
-        public byte[] Tour_description { get; set; }
+        public string Tour_description { get; set; }
         public int Comission { get; set; }
         public int Tour_company_id { get; set; }
         public int Resort_id { get; set; }
         public int Hotel_id { get; set; }
-
-        public string HashedID => "#" + ID_tour;
-
+    
         public virtual City City { get; set; }
         public virtual Company Company { get; set; }
         public virtual Country Country { get; set; }
@@ -38,5 +36,20 @@ namespace TourAgency.Entities
         public virtual Hotel Hotel { get; set; }
         public virtual List_Include List_Include { get; set; }
         public virtual Resort Resort { get; set; }
+        public string PriceRub => Price + " руб.";
+        public string HashedID => "Тур #" + ID_tour + " ";
+        public string FormattedDuration
+        {
+            get
+            {
+                int hours = Tour_duration.Hours;
+                int minutes = Tour_duration.Minutes;
+
+                if (minutes == 0)
+                    return $"{hours}ч";
+                else
+                    return $"{hours}ч. {minutes} мин.";
+            }
+        }
     }
 }

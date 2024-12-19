@@ -7,11 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="White" Padding="10">
     <Grid>
-        <!-- Определяем две колонки -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
 
         <!-- Контейнер для строк поиска -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="0">
@@ -36,6 +31,11 @@
                 <DatePicker x:Name="DepartureDateSearchBox" Width="120" Margin="0,0,10,0" />
             </StackPanel>
 
+            <StackPanel>
+                <Label Content="Дата вылета" VerticalAlignment="Center" Margin="0,0,10,0" />
+                <ComboBox x:Name="HotelSearchBox" Width="120" Margin="0,0,10,0" />
+            </StackPanel>
+
             <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
                 <Label Content="Дополнительно" VerticalAlignment="Center" Margin="0,0,10,0" />
                 <ComboBox x:Name="CustomCheckBoxComboBox" Width="120" Margin="0,0,10,0">
@@ -52,7 +52,7 @@
                 </ComboBox>
             </StackPanel>
 
-            <Button Content="Поиск" VerticalAlignment="Bottom" Width="75" Height="30" Grid.Column="1" Margin="10,0,0,0" Click="Button_Click" Foreground="White" Background="Blue"/>
+            <Button Content="Поиск" VerticalAlignment="Bottom" Width="75" Height="30" Margin="10,0,0,0" Click="Button_Click" Foreground="White" Background="Blue"/>
         </StackPanel>
 
         <!-- Контейнер для отображения результатов поиска -->
@@ -82,134 +82,290 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <StackPanel>
-                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                            <Image Source="/Resources/default.png"
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0">
+                                        <Image Source="/Resources/default.png"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Top"
+                                                   Grid.Row="1"
                                                    Width="100"
                                                    Height="100"
-                                                   Margin="5"/>
+                                                   Margin="5"
+                                                   Grid.Column="0"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1">
+                                        
+                                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
                                             <TextBlock Text="{Binding HashedID}"
                                                        FontWeight="Bold"
-                                                       HorizontalAlignment="Left"/>
-                                            <TextBlock Text="{Binding Tour_type}" Margin="0,0,0,0"/>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text=" Длительность: "
-                                                       FontStyle="Italic"/>
-                                                <TextBlock Text="{Binding Tour_duration}"/>
-                                            </StackPanel>
-                                        </StackPanel>
-                                        
-                                        <!-- Описание -->
-                                        <TextBlock Grid.Row="2"
-                                                   Text="{Binding Tour_description}"
-                                                   MaxHeight="60"
-                                                   TextWrapping="Wrap"
-                                                   Margin="0,5,0,0"/>
+                                                       HorizontalAlignment="Left"
+                                                       FontSize="16"/>
 
-                                        <StackPanel Grid.Row="5" 
-                                                    Orientation="Horizontal" 
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1">
+                                            <TextBlock Text="{Binding Tour_description}"
+                                                   MaxHeight="60"
+                                                   HorizontalAlignment="Left"
+                                                   Width="800"
+                                                   TextWrapping="Wrap"
+                                                   FontSize="14"
+                                                   Margin="0,5,0,0"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Row="3" Orientation="Horizontal" 
                                                     Margin="0,10,0,0">
                                             
                                             <!-- Цена -->
-                                            <Border Background="BlueViolet"
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Price}"
+                                                <StackPanel>
+
+                                                    <TextBlock Text="Цена"
+                                                            HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding PriceRub}"
                                                             HorizontalAlignment="Center"
-                                                            Foreground="White"/>
+                                                            FontWeight="Bold"/>
+                                                </StackPanel>
                                             </Border>
 
-                                            <!-- Страна -->
-                                            <Border Background="BlueViolet"
+                                            <!-- Тип тура -->
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Country.Name}"
-                                                           HorizontalAlignment="Center"
-                                                           Foreground="White"/>
+                                                <StackPanel>
+
+                                                    <TextBlock Text="Тип тура"
+                                                            HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Tour_type}"
+                                                            HorizontalAlignment="Center"
+                                                            FontWeight="Bold"/>
+                                                </StackPanel>
                                             </Border>
+                                            
+                                            <!-- Страна -->
+                                            <Border Background="#00bfff"
+                                                    BorderThickness="1"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                <StackPanel>
+                                                    <TextBlock Text="Страна"
+                                                            HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Country.Name}"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                </StackPanel>
+                                            </Border>
+                                            
 
                                             <!-- Номер рейса -->
-                                            <Border Background="BlueViolet"
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Flight_id}"
-                                                           HorizontalAlignment="Center"
-                                                           Foreground="White"/>
+                                                <StackPanel>
+                                                    <TextBlock Text="Номер рейса"
+                                                          HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Flight.Flight_number}"
+                                                          HorizontalAlignment="Center"
+                                                          FontWeight="Bold"/>
+                                                </StackPanel>
+
                                             </Border>
 
-                                            <!-- Что включено -->
-                                            <!--<Border BorderBrush="Black"
-                                                    BorderThickness="1"
-                                                    CornerRadius="10"
-                                                    Padding="5"
-                                                    Margin="0,5">
-                                                <TextBlock Text="{Binding }"
-                                                            HorizontalAlignment="Center"/>
-                                            </Border>-->
-
                                             <!-- Комиссия -->
-                                            <Border Background="BlueViolet"
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Comission}"
+                                                <StackPanel>
+                                                    <TextBlock Text="Комиссия"
+                                                               HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Comission}"
                                                            HorizontalAlignment="Center"
-                                                           Foreground="White"/>
+                                                           FontWeight="Bold"/>
+                                                </StackPanel>
                                             </Border>
 
                                             <!-- Тур-компания -->
-                                            <Border Background="BlueViolet"
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
+                                                <StackPanel>
+                                                    <TextBlock Text="Туроператор"
+                                                               HorizontalAlignment="Center"/>
                                                     <TextBlock Text="{Binding Company.Name}"
                                                                HorizontalAlignment="Center"
-                                                               Foreground="White"/>
+                                                               FontWeight="Bold"/>
+                                                </StackPanel>
+
                                             </Border>
 
                                             <!-- Курорт -->
-                                            <Border Background="BlueViolet"
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Resort.Name}"
+                                                <StackPanel>
+                                                    <TextBlock Text="Курорт"
+                                                            HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Resort.Name}"
                                                             HorizontalAlignment="Center"
-                                                            Foreground="White"/>
+                                                            FontWeight="Bold"/>
+                                                </StackPanel>
                                             </Border>
-
-                                            <!-- Название отеля -->
-                                            <Border Background="BlueViolet"
+                                            
+                                            <!-- Длительность -->
+                                            <Border Background="#00bfff"
                                                     BorderThickness="1"
                                                     CornerRadius="10"
                                                     Padding="5"
                                                     Margin="0,5">
-                                                <TextBlock Text="{Binding Hotel.Name}"
+                                                <StackPanel>
+                                                    <TextBlock Text="Длительность" HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding FormattedDuration}"
+                                                               FontWeight="Bold"
+                                                               HorizontalAlignment="Center"/>
+                                                </StackPanel>
+                                            </Border>
+                                            
+                                            <!-- Название отеля -->
+                                            <Border Background="#00bfff"
+                                                    BorderThickness="1"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                <StackPanel>
+                                                    <TextBlock Text="Отель"
+                                                            HorizontalAlignment="Center"/>
+                                                    <TextBlock Text="{Binding Hotel.Name}"
                                                            HorizontalAlignment="Center"
-                                                           Foreground="White"/>
+                                                           FontWeight="Bold"/>
+                                                </StackPanel>
                                             </Border>
                                         </StackPanel>
 
-                                        <StackPanel Orientation="Horizontal">
+                                        <StackPanel Grid.Row="4">
+                                            <TextBlock Text="Тур включает"
+                                                            HorizontalAlignment="Left"
+                                                            FontWeight="Bold"
+                                                            FontSize="14"/>
+                                            <!-- Тур включает: -->
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                                <Border Background="#E4CBF0"
+                                                    BorderThickness="1"
+                                                    HorizontalAlignment="Left"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="Полёт"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                        <CheckBox IsChecked="{Binding List_Include.Tour_Include_Flight}"
+                                                              HorizontalAlignment="Center" IsEnabled="False"/>
+                                                    </StackPanel>
+                                                </Border>
+                                                <Border Background="#E4CBF0"
+                                                    BorderThickness="1"
+                                                    HorizontalAlignment="Left"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="VISA"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                        <CheckBox IsChecked="{Binding List_Include.Tour_Include_Visa}"
+                                                              HorizontalAlignment="Center" IsEnabled="False"/>
+                                                    </StackPanel>
+                                                </Border>
+                                                <Border Background="#E4CBF0"
+                                                    BorderThickness="1"
+                                                    HorizontalAlignment="Left"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="Отель"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                        <CheckBox IsChecked="{Binding List_Include.Tour_Include_Hotel}"
+                                                              HorizontalAlignment="Center" IsEnabled="False"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#E4CBF0"
+                                                    BorderThickness="1"
+                                                    HorizontalAlignment="Left"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="Экскурсия"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                        <CheckBox IsChecked="{Binding List_Include.Tour_Include_Excursion}"
+                                                                  HorizontalAlignment="Center" IsEnabled="False"/>
+                                                    </StackPanel>
+                                                </Border>
+
+                                                <Border Background="#E4CBF0"
+                                                    BorderThickness="1"
+                                                    HorizontalAlignment="Left"
+                                                    CornerRadius="10"
+                                                    Padding="5"
+                                                    Margin="0,5">
+                                                    <StackPanel>
+                                                        <TextBlock Text="Развлечения"
+                                                           HorizontalAlignment="Center"
+                                                           FontWeight="Bold"/>
+                                                        <CheckBox IsChecked="{Binding List_Include.Tour_Include_Entertaiments}"
+                                                                  HorizontalAlignment="Center" IsEnabled="False"/>
+                                                    </StackPanel>
+                                                </Border>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5">
+                                            <Button Content="Забронировать"
+                                                            Name="BtnReserveTour"
+                                                            Click="BtnEdit_Click"
+                                                            Width="200"
+                                                            Height="30"
+                                                            Margin="5"
+                                                            Background="Blue"
+                                                            Foreground="White"
+                                                            Visibility="{Binding TouristControlVisibility}"/>
                                             <Button Content="Редактировать"
                                                             Name="BtnEdit"
                                                             Click="BtnEdit_Click"
                                                             Width="200"
+                                                            Height="30"
                                                             Margin="5"
+                                                            Background="Blue"
+                                                            Foreground="White"
                                                             Visibility="{Binding AdminControlVisibility}"/>
                                             <Button Content="Удалить"
                                                     Name="BtnDelete"
                                                     Click="BtnDelete_Click"
                                                     Width="200"
+                                                    Height="30"
                                                     Margin="5"
+                                                    Background="Blue"
+                                                    Foreground="White"
                                                     Visibility="{Binding AdminControlVisibility}"/>
                                         </StackPanel>
                                     </StackPanel>

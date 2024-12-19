@@ -142,7 +142,7 @@
     <Property Name="Price" Type="int" Nullable="false" />
     <Property Name="List_include_id" Type="int" Nullable="false" />
     <Property Name="Tour_type" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Tour_description" Type="varbinary" MaxLength="255" />
+    <Property Name="Tour_description" Type="varchar(max)" />
     <Property Name="Comission" Type="int" Nullable="false" />
     <Property Name="Tour_company_id" Type="int" Nullable="false" />
     <Property Name="Resort_id" Type="int" Nullable="false" />

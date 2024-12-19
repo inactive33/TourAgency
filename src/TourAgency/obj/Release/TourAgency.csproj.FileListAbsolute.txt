@@ -168,3 +168,5 @@ C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourSearchCon
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\TourSearchControl.baml
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\HotelsSearchPage.g.cs
 C:\Users\user\Documents\Tour\TourAgency\src\TourAgency\obj\Release\HotelsSearchPage.baml
+D:\_home\proect\TourAgency\src\TourAgency\obj\Release\HotelsSearchPage.g.cs
+D:\_home\proect\TourAgency\src\TourAgency\obj\Release\HotelsSearchPage.baml

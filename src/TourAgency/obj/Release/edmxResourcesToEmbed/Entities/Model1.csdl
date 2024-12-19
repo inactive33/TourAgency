@@ -229,7 +229,7 @@
     <Property Name="Price" Type="Int32" Nullable="false" />
     <Property Name="List_include_id" Type="Int32" Nullable="false" />
     <Property Name="Tour_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Tour_description" Type="Binary" MaxLength="255" FixedLength="false" />
+    <Property Name="Tour_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Comission" Type="Int32" Nullable="false" />
     <Property Name="Tour_company_id" Type="Int32" Nullable="false" />
     <Property Name="Resort_id" Type="Int32" Nullable="false" />

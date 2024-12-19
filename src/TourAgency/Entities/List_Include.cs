@@ -9,7 +9,6 @@
 
 namespace TourAgency.Entities
 {
-    using System;
     using System.Collections.Generic;
     
     public partial class List_Include
@@ -26,8 +25,9 @@ namespace TourAgency.Entities
         public bool Tour_Include_Hotel { get; set; }
         public bool Tour_Include_Excursion { get; set; }
         public bool Tour_Include_Entertaiments { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tour> Tours { get; set; }
     }
+   
 }

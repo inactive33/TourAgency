@@ -6,14 +6,14 @@
     <edmx:Diagrams>
       <Diagram DiagramId="fc7d04c14e64444483354c3dfabd0223" Name="Diagram1" ZoomLevel="44">
         <EntityTypeShape EntityType="TourAgencyModel.City" Width="1.5" PointX="3" PointY="8.625" />
-        <EntityTypeShape EntityType="TourAgencyModel.Company" Width="1.5" PointX="3" PointY="14.25" />
-        <EntityTypeShape EntityType="TourAgencyModel.Country" Width="1.5" PointX="3" PointY="17.125" />
+        <EntityTypeShape EntityType="TourAgencyModel.Company" Width="1.5" PointX="3" PointY="13.5" />
+        <EntityTypeShape EntityType="TourAgencyModel.Country" Width="1.5" PointX="3" PointY="11.125" />
         <EntityTypeShape EntityType="TourAgencyModel.Currency" Width="1.5" PointX="7.75" PointY="4.5" />
         <EntityTypeShape EntityType="TourAgencyModel.Flight" Width="1.5" PointX="3" PointY="19.5" />
         <EntityTypeShape EntityType="TourAgencyModel.Hotel" Width="1.5" PointX="3" PointY="4.375" />
-        <EntityTypeShape EntityType="TourAgencyModel.List_Include" Width="1.5" PointX="3" PointY="11.125" />
+        <EntityTypeShape EntityType="TourAgencyModel.List_Include" Width="1.5" PointX="3" PointY="16.375" />
         <EntityTypeShape EntityType="TourAgencyModel.List_Present" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="TourAgencyModel.Order_type" Width="1.5" PointX="0.75" PointY="14.5" />
+        <EntityTypeShape EntityType="TourAgencyModel.Order_type" Width="1.5" PointX="0.75" PointY="13.75" />
         <EntityTypeShape EntityType="TourAgencyModel.Resort" Width="1.5" PointX="0.75" PointY="5" />
         <EntityTypeShape EntityType="TourAgencyModel.Role" Width="1.5" PointX="7.75" PointY="1.875" />
         <EntityTypeShape EntityType="TourAgencyModel.Room" Width="1.5" PointX="5.25" PointY="10.625" />
