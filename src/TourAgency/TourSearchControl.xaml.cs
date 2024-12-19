@@ -27,6 +27,21 @@ namespace TourAgency
             Update();
 
             LViewTours.ItemsSource = TourAgencyEntities.GetContext().Tours.ToList();
+            // 1 - админ, 2 -  пользователь
+            //if (App.CurrentUser.Role_id == 1)
+            {
+                //BtnEdit.Visibility = Visibility.Visible;
+            }
+            //else
+            {
+                //BtnEdit.Visibility = Visibility.Collapsed;
+            }
+            //ResortSearchBox.SelectedIndex = 0;
+            //DepartureCitySearchBox.SelectedIndex = 0;
+            //CountrySearchBox.SelectedIndex = 0;
+            //DepartureDateSearchBox.SelectedDate = DateTime.Now;
+            //CustomCheckBoxComboBox.SelectedIndex = 0;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,7 +65,7 @@ namespace TourAgency
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameManager.FrameMain.Navigate(new AddEditTour(null));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)

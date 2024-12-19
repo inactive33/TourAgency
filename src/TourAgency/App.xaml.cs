@@ -13,5 +13,6 @@ namespace TourAgency
     /// </summary>
     public partial class App : Application
     {
+        //public static Entities.User CurrentUser = null;
     }
 }

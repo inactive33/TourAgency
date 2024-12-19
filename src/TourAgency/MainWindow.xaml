@@ -40,7 +40,6 @@
                                    TextAlignment="Center"
                                    FontSize="14" 
                                    Foreground="#2C3E50"/>
-
                     </Button.Content>
                 </Button>
 
