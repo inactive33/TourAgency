@@ -10,10 +10,6 @@
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TourAgency||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|d:\\_home\\proect\\touragency\\src\\touragency\\resources\\default.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:resources\\default.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|D:\\_home\\proect\\TourAgency\\src\\TourAgency\\toursearchcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{034F14AF-956B-44F6-AD43-FCD22A48BE56}|TourAgency.csproj|solutionrelative:toursearchcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -89,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Tour.cs",
               "DocumentMoniker": "D:\\_home\\proect\\TourAgency\\src\\TourAgency\\Entities\\Tour.cs",
               "RelativeDocumentMoniker": "Entities\\Tour.cs",
@@ -101,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TourAgencyEntities.cs",
               "DocumentMoniker": "D:\\_home\\proect\\TourAgency\\src\\TourAgency\\Entities\\TourAgencyEntities.cs",
               "RelativeDocumentMoniker": "Entities\\TourAgencyEntities.cs",
@@ -113,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TourSearchControl.xaml.cs",
               "DocumentMoniker": "D:\\_home\\proect\\TourAgency\\src\\TourAgency\\TourSearchControl.xaml.cs",
               "RelativeDocumentMoniker": "TourSearchControl.xaml.cs",
@@ -133,18 +129,6 @@
               "RelativeToolTip": "TourSearchControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-18T17:55:49.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "default.png",
-              "DocumentMoniker": "D:\\_home\\proect\\TourAgency\\src\\TourAgency\\Resources\\default.png",
-              "RelativeDocumentMoniker": "Resources\\default.png",
-              "ToolTip": "D:\\_home\\proect\\TourAgency\\src\\TourAgency\\Resources\\default.png",
-              "RelativeToolTip": "Resources\\default.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-12-18T22:42:07.649Z",
               "EditorCaption": ""
             }
           ]
