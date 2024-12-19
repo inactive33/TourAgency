@@ -55,6 +55,7 @@ namespace TourAgency.ViewModel
             if (_userModel.ValidateUser(_login, _password))
             {
                 Message = "Вход выполнен!";
+                //App.CurrentUser.Role_id = 1;
                 FrameManager.FrameMain.Navigate(new ToursPage());
             }
             else

@@ -11,6 +11,7 @@ namespace TourAgency
         public MainWindow()
         {
             InitializeComponent();
+           // App.CurrentUser.Role_id = 4;
             MainFrame.Navigate(new TourSearchControl());
             FrameManager.FrameMain = MainFrame;
         }

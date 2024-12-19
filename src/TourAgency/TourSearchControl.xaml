@@ -13,14 +13,9 @@
             <!-- Метка и текстовые поля для сортировки -->
             <StackPanel>
                 <Label Content="Курорт" VerticalAlignment="Center" Margin="0,0,10,0" />
-                <ComboBox x:Name="ResortSearchBox" SelectedItem="Name" DisplayMemberPath="Name" Width="120" Margin="0,0,10,0" />
+                <ComboBox x:Name="ResortSearchBox" SelectedItem="Name" SelectedValuePath="ID_Resort" ItemsSource="{Binding Resorts}" SelectedValue="{Binding ID_Resort, Mode=TwoWay}" DisplayMemberPath="Name" Width="120" Margin="0,0,10,0" />
             </StackPanel>
-
-            <StackPanel>
-                <Label Content="Город вылета" VerticalAlignment="Center" Margin="0,0,10,0" />
-                <ComboBox x:Name="DepartureCitySearchBox" SelectedItem="Name" DisplayMemberPath="Name" Width="120" Margin="0,0,10,0" />
-            </StackPanel>
-
+    
             <StackPanel>
                 <Label Content="Страна" VerticalAlignment="Center" Margin="0,0,10,0" />
                 <ComboBox x:Name="CountrySearchBox" SelectedItem="Name" DisplayMemberPath="Name" Width="120" Margin="0,0,10,0" />
@@ -31,10 +26,6 @@
                 <DatePicker x:Name="DepartureDateSearchBox" Width="120" Margin="0,0,10,0" />
             </StackPanel>
 
-            <StackPanel>
-                <Label Content="Дата вылета" VerticalAlignment="Center" Margin="0,0,10,0" />
-                <ComboBox x:Name="HotelSearchBox" Width="120" Margin="0,0,10,0" />
-            </StackPanel>
 
             <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
                 <Label Content="Дополнительно" VerticalAlignment="Center" Margin="0,0,10,0" />
@@ -341,7 +332,7 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5">
                                             <Button Content="Забронировать"
-                                                            Name="BtnReserveTour"
+                                                            x:Name="BtnReserveTour"
                                                             Click="BtnEdit_Click"
                                                             Width="200"
                                                             Height="30"
