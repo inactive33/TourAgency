@@ -36,11 +36,11 @@ namespace TourAgency
             {
                 //BtnEdit.Visibility = Visibility.Collapsed;
             }
-            //ResortSearchBox.SelectedIndex = 0;
-            //DepartureCitySearchBox.SelectedIndex = 0;
-            //CountrySearchBox.SelectedIndex = 0;
-            //DepartureDateSearchBox.SelectedDate = DateTime.Now;
-            //CustomCheckBoxComboBox.SelectedIndex = 0;
+            ResortSearchBox.SelectedItem = null;
+            DepartureCitySearchBox.SelectedItem = null;
+            CountrySearchBox.SelectedItem = null;
+            DepartureDateSearchBox.SelectedDate = null;
+            CustomCheckBoxComboBox.SelectedItem = null;
 
         }
 
