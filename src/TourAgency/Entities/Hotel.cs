@@ -29,6 +29,7 @@ namespace TourAgency.Entities
         public int Dist_beach { get; set; }
         public int HotelStar { get; set; }
         public int List_Present_id { get; set; }
+        public string HashedID_hotel => "Отель #" + ID_hotel + " ";
     
         public virtual List_Present List_Present { get; set; }
         public virtual Resort Resort { get; set; }

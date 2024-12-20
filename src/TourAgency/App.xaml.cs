@@ -8,5 +8,7 @@ namespace TourAgency
     /// </summary>
     public partial class App : Application
     {
+        //public static TourAgencyEntities Context { get; } = new TourAgencyEntities();
+        //public static User CurrentUser;
     }
 }

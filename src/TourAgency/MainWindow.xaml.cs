@@ -33,7 +33,7 @@ namespace TourAgency
 
         private void BtnNavHotels_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.FrameMain.Navigate(new HotelsSearchPage());
+            FrameManager.FrameMain.Navigate(new HotelsSearchControl());
         }
     }
 }

@@ -19,7 +19,12 @@ namespace TourAgency.Entities
             : base(connectString)
         {
         }
-    
+
+        public TourAgencyEntities()
+            : base()
+        {
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

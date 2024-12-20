@@ -164,8 +164,8 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="FrameManager.cs" />
-    <Compile Include="HotelsSearchPage.xaml.cs">
-      <DependentUpon>HotelsSearchPage.xaml</DependentUpon>
+    <Compile Include="HotelsSearchControl.xaml.cs">
+      <DependentUpon>HotelsSearchControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\SignInModel.cs" />
     <Compile Include="TourSearchControl.xaml.cs">
@@ -182,7 +182,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HotelsSearchPage.xaml">
+    <Page Include="HotelsSearchControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

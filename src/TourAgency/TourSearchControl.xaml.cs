@@ -25,11 +25,13 @@ namespace TourAgency
             //    deleteBtn.Visibility = Visibility.Collapsed;
             //    editBtn.Visibility = Visibility.Collapsed;
             //}
-            //else if (App.CurrentUser.Role_id == 3) {
+            //else if (App.CurrentUser.Role_id == 3)
+            //{
             //    deleteBtn.Visibility = Visibility.Collapsed;
             //    editBtn.Visibility = Visibility.Collapsed;
             //}
-            //else if (App.CurrentUser.Role_id == 4){
+            //else if (App.CurrentUser.Role_id == 4)
+            //{
 
             //    deleteBtn.Visibility = Visibility.Collapsed;
             //    editBtn.Visibility = Visibility.Collapsed;
